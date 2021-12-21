@@ -1,0 +1,15 @@
+.article_cust p{
+	padding-bottom: 10px;
+	padding-top: 10px;
+}
+
+.section_cust{
+	padding-left: 5%;
+	padding-right: 10%;
+}
+
+.sidebar_cust p{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	font-size: 15px;
+}
