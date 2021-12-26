@@ -391,21 +391,21 @@ area, you might find it worth taking a look at this early stage!</p>
 <p>To explore the extreme case, I wrote a pyparsing transformer to convert identifiers in a body of Python source to mixed font, equivalent to the original source after NFKC normalization. Here are hello.py, and a snippet from unittest/utils.py:</p>
 <pre><code>def 𝚑𝓮𝖑𝒍𝑜():
 
-try:
+    try:
 
-𝔥e𝗅𝕝𝚘︴ = &quot;Hello&quot;
+        𝔥e𝗅𝕝𝚘︴ = &quot;Hello&quot;
 
-𝕨𝔬r𝓵ᵈ﹎ = &quot;World&quot;
+        𝕨𝔬r𝓵ᵈ﹎ = &quot;World&quot;
 
-ᵖ𝖗𝐢𝘯𝓽(f&quot;{𝗵ｅ𝓵𝔩º_}, {𝖜ₒ𝒓lⅆ︴}!&quot;)
+        ᵖ𝖗𝐢𝘯𝓽(f&quot;{𝗵ｅ𝓵𝔩º_}, {𝖜ₒ𝒓lⅆ︴}!&quot;)
 
-except 𝓣𝕪ᵖｅ𝖤𝗿ᵣ𝖔𝚛 as ⅇ𝗑c:
+    except 𝓣𝕪ᵖｅ𝖤𝗿ᵣ𝖔𝚛 as ⅇ𝗑c:
 
-𝒑rℹₙₜ(&quot;failed: {}&quot;.𝕗𝗼ʳᵐªｔ(ᵉ𝐱𝓬))
+        𝒑rℹₙₜ(&quot;failed: {}&quot;.𝕗𝗼ʳᵐªｔ(ᵉ𝐱𝓬))
 
 if _︴ⁿ𝓪𝑚𝕖__ == &quot;__main__&quot;:
 
-𝒉eℓˡ𝗈()
+    𝒉eℓˡ𝗈()
 
 # snippet from unittest/util.py
 
@@ -413,13 +413,13 @@ _𝓟Ⅼ𝖠𝙲𝗘ℋ𝒪Lᴰ𝑬𝕽﹏𝕷𝔼𝗡 = 12
 
 def _𝔰ʰ𝓸ʳ𝕥𝙚𝑛(𝔰, p𝑟𝔢ﬁ𝖝𝕝𝚎𝑛, ｓᵤ𝑓𝗳𝗂𝑥𝗹ₑ𝚗):
 
-ˢ𝗸ｉ𝗽 = 𝐥ｅ𝘯(𝖘) - ｐr𝚎𝖋𝐢x𝗅ᵉ𝓷 - 𝒔𝙪ﬀｉ𝘅𝗹𝙚ₙ
+    ˢ𝗸ｉ𝗽 = 𝐥ｅ𝘯(𝖘) - ｐr𝚎𝖋𝐢x𝗅ᵉ𝓷 - 𝒔𝙪ﬀｉ𝘅𝗹𝙚ₙ
 
-if sｋi𝘱 &gt; _𝐏𝗟𝖠𝘊𝙴H𝕺Ｌ𝕯𝙀𝘙﹏L𝔈𝒩:
+    if sｋi𝘱 &gt; _𝐏𝗟𝖠𝘊𝙴H𝕺Ｌ𝕯𝙀𝘙﹏L𝔈𝒩:
 
-𝘴 = '%s[%d chars]%s' % (𝙨[:𝘱𝐫𝕖𝑓𝕚ｘℓ𝒆𝕟], ₛ𝚔𝒊p, 𝓼[𝓁𝒆𝖓(𝚜) - 𝙨𝚞𝒇ﬁx𝙡ᵉ𝘯:])
+        𝘴 = '%s[%d chars]%s' % (𝙨[:𝘱𝐫𝕖𝑓𝕚ｘℓ𝒆𝕟], ₛ𝚔𝒊p, 𝓼[𝓁𝒆𝖓(𝚜) - 𝙨𝚞𝒇ﬁx𝙡ᵉ𝘯:])
 
-return ₛ
+    return ₛ
 
 </code></pre>
 <p>You should able to paste these into your local UTF-8-aware editor or IDE and execute them as-is.</p>
