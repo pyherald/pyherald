@@ -23,7 +23,7 @@
 <section class="section">
   <hr>
 
-Friday 24th December 2021 | <a href="#">archives</a>
+Friday 24th December 2021 | <a href="#">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a>
 
 <hr>
 
@@ -46,6 +46,12 @@ Friday 24th December 2021 | <a href="#">archives</a>
       <p>█ <p>SQLModel by FastAPI&rsquo;s author made it to the @tryolabs &ldquo;Top Python libraries of 2021&rdquo; list! </p> <span class="is-size-7"><i>Tryolabs on Twitter, <a href="https://twitter.com/tryolabs/status/1473333219160477699?s=20">src</a></i></span></p>
       
       <p>█ <p>HTMX + Flask: Modern Python Web Apps, Hold the JavaScript by Michael Kennedy is up on YouTube</p> <span class="is-size-7"><i>FlaskCon2021, <a href="https://www.youtube.com/watch?v=kNXVFB5eQfo">src</a></i></span></p>
+      
+      <p>█ <p>Discord.py&rsquo;s maintained fork is out: Welcome NextCord</p> <span class="is-size-7"><i>Github, <a href="https://github.com/nextcord/nextcord">src</a></i></span></p>
+      
+      <p>█ <p>PEP 671 &ndash; Syntax for late-bound function argument defaults</p> <span class="is-size-7"><i>Chris Angelico, <a href="https://www.python.org/dev/peps/pep-0671/">src</a></i></span></p>
+      
+      <p>█ <p>The reasoning behind choosing the TOML format for Python packaging.</p> <span class="is-size-7"><i>PEP 518 -- Specifying Minimum Build System Requirements for Python Projects, <a href="https://www.python.org/dev/peps/pep-0518/#other-file-formats">src</a></i></span></p>
       
 
 <hr>
@@ -315,6 +321,166 @@ usable version:</p>
 <p>Probably worth a bookmark in your browser.</p>
 <p>Rest easy /F &hellip;</p>
 <p>Skip</p>
+      </p>
+      <hr>
+      </article>
+     
+      
+      <article class="article_cust">
+         <p class="title">Instagram: Type Hints for Compiler Optimisation <br> 
+<span class="is-size-7"><i>Note: Mail by Carl Meyer, <a href="https://mail.python.org/archives/list/python-ideas@python.org/message/ZM22AKAFIQDHF2E7VPHQ2DZJNBXPTRFM/">src</a></i></span>
+         </p>
+           
+
+      <p>
+        <p>I think there&rsquo;s an important distinction to be made between &ldquo;enforcing
+types&rdquo; as in &ldquo;type annotations that are present are checked for
+consistency at compile time and enforced at runtime, instead of only
+being checked by a linter and possibly totally wrong at runtime&rdquo; vs
+&ldquo;enforcing types&rdquo; as in &ldquo;everything must always be fully typed.&rdquo; It
+seems that you are proposing both together, and so far readers are
+mostly reacting against the second. But I would like to observe that
+the one does not have to imply the other.</p>
+<p>I think requiring types everywhere is pretty much a non-starter for
+the Python language and community; the resulting language would no
+longer be Python, it would be a very different language with Python&rsquo;s
+syntax.</p>
+<p>But I think integrating optional types more closely into the language,
+so that users can trust that the type annotations that are present are
+not well-intentioned lies, and the compiler can make use of them to
+optimize some operations, increases the value of type annotations and
+the experience of using them, and can still fully allow for untyped
+and partially-typed code in the places where static types don&rsquo;t make
+sense (because the code is highly dynamic or because its just a quick
+script or prototype.)</p>
+<p>I currently work on a project we call &ldquo;Static Python&rdquo; (not a great
+name, since really it&rsquo;s fully dynamic Python with optional static
+types) which does exactly this. Types remain fully optional, the type
+system is gradual, but where you do specify annotations of types that
+are built-ins or are defined in modules opted into the Static Python
+compiler, you get compile-time type checking and runtime checks that
+the values used match the annotated types. This is currently only
+available if you use the fork of CPython in which we develop it [1].
+We hope that at some point it may be possible to instead make it
+available as a pip-installable extension to normal CPython, but this
+is probably a long ways out yet. We are building this primarily for
+the performance benefits. The benefit of being able to use statically
+known and trusted type information to elide some costly dynamic
+operations more than makes up for the cost of the added runtime type
+checks, partly because our compiler is able to intelligently elide
+those runtime type checks in static-to-static calls, only checking
+when values first are passed in from untyped sources.</p>
+<p>This is early experimental work, and very far from anything that might
+be considered for mainstream CPython, but if you&rsquo;re interested in this
+area, you might find it worth taking a look at this early stage!</p>
+<p>Carl</p>
+<p>[1] <a href="https://github.com/facebookincubator/cinder">https://github.com/facebookincubator/cinder</a></p>
+      </p>
+      <hr>
+      </article>
+     
+      
+      <article class="article_cust">
+         <p class="title">Preventing Unicode-related Gotchas <br> 
+<span class="is-size-7"><i>Note: Mail by Paul McGuire, <a href="https://mail.python.org/archives/list/python-dev@python.org/message/GBLXJ2ZTIMLBD2MJQ4VDNUKFFTPPIIMO/">src</a></i></span>
+         </p>
+           
+
+      <p>
+        <p>As part of working on the next edition of “Python in a Nutshell” with Steve, Alex Martelli, and Anna Ravencroft, Alex suggested that I add a cautionary section on homoglyphs, specifically citing “<code>A</code>” (LATIN CAPITAL LETTER A) and “<code>Α</code>” (GREEK CAPITAL LETTER ALPHA) as an example problem pair. I wanted to look a little further at the use of characters in identifiers beyond the standard 7-bit ASCII, and so I found some of these same issues dealing with Unicode NFKC normalization. The first discovery was the overlapping normalization of “<code>ªº</code>” with “<code>ao</code>”. This was quite a shock to me, since I assumed that the inclusion of Unicode for identifier characters would preserve the uniqueness of the different code points. Even ligatures can be used, and will overlap with their multi-character ASCII forms. So we have added a second note in the upcoming edition on the risks of using these “homonorms” (which is a word I just made up for the occasion).</p>
+<p>To explore the extreme case, I wrote a pyparsing transformer to convert identifiers in a body of Python source to mixed font, equivalent to the original source after NFKC normalization. Here are hello.py, and a snippet from unittest/utils.py:</p>
+<pre><code>def 𝚑𝓮𝖑𝒍𝑜():
+
+try:
+
+𝔥e𝗅𝕝𝚘︴ = &quot;Hello&quot;
+
+𝕨𝔬r𝓵ᵈ﹎ = &quot;World&quot;
+
+ᵖ𝖗𝐢𝘯𝓽(f&quot;{𝗵ｅ𝓵𝔩º_}, {𝖜ₒ𝒓lⅆ︴}!&quot;)
+
+except 𝓣𝕪ᵖｅ𝖤𝗿ᵣ𝖔𝚛 as ⅇ𝗑c:
+
+𝒑rℹₙₜ(&quot;failed: {}&quot;.𝕗𝗼ʳᵐªｔ(ᵉ𝐱𝓬))
+
+if _︴ⁿ𝓪𝑚𝕖__ == &quot;__main__&quot;:
+
+𝒉eℓˡ𝗈()
+
+# snippet from unittest/util.py
+
+_𝓟Ⅼ𝖠𝙲𝗘ℋ𝒪Lᴰ𝑬𝕽﹏𝕷𝔼𝗡 = 12
+
+def _𝔰ʰ𝓸ʳ𝕥𝙚𝑛(𝔰, p𝑟𝔢ﬁ𝖝𝕝𝚎𝑛, ｓᵤ𝑓𝗳𝗂𝑥𝗹ₑ𝚗):
+
+ˢ𝗸ｉ𝗽 = 𝐥ｅ𝘯(𝖘) - ｐr𝚎𝖋𝐢x𝗅ᵉ𝓷 - 𝒔𝙪ﬀｉ𝘅𝗹𝙚ₙ
+
+if sｋi𝘱 &gt; _𝐏𝗟𝖠𝘊𝙴H𝕺Ｌ𝕯𝙀𝘙﹏L𝔈𝒩:
+
+𝘴 = '%s[%d chars]%s' % (𝙨[:𝘱𝐫𝕖𝑓𝕚ｘℓ𝒆𝕟], ₛ𝚔𝒊p, 𝓼[𝓁𝒆𝖓(𝚜) - 𝙨𝚞𝒇ﬁx𝙡ᵉ𝘯:])
+
+return ₛ
+
+</code></pre>
+<p>You should able to paste these into your local UTF-8-aware editor or IDE and execute them as-is.</p>
+<p>(If this doesn’t come through, you can also see this as a GitHub gist at Hello, World rendered in a variety of Unicode characters (github.com) https://gist.github.com/ptmcg/bf35d5ada416080d481d789988b6b466 . I have a second gist containing the transformer, but it is still a private gist atm.)</p>
+<p>Some other discoveries:</p>
+<p>“<code>·</code>” (ASCII 183) is a valid identifier body character, making “<code>_···</code>” a valid Python identifier. This could actually be another security attack point, in which “<code>s·join(‘x’)</code>” could be easily misread as “<code>s.join(‘x’)</code>”, but would actually be a call to potentially malicious method “<code>s·join</code>”.</p>
+<p>“<code>_</code>” seems to be a special case for normalization. Only the ASCII “<code>_</code>” character is valid as a leading identifier character; the Unicode characters that normalize to “<code>_</code>” (any of the characters in “<code>︳︴﹍﹎﹏＿</code>”) can only be used as identifier body characters. “<code>︳</code>” especially could be misread as “<code>|</code>” followed by a space, when it actually normalizes to “<code>_</code>”.</p>
+<p>Potential beneficial uses:</p>
+<p>I am considering taking my transformer code and experimenting with an orthogonal approach to syntax highlighting, using Unicode groups instead of colors. Module names using characters from one group, builtins from another, program variables from another, maybe distinguish local from global variables. Colorizing has always been an obvious syntax highlight feature, but is an accessibility issue for those with difficulty distinguishing colors. Unlike the “ransom note” code above, code highlighted in this way might even be quite pleasing to the eye.</p>
+<p>&ndash; Paul McGuire</p>
+      </p>
+      <hr>
+      </article>
+     
+      
+      <article class="article_cust">
+         <p class="title">Why Remove Deprecated Functions <br> 
+<span class="is-size-7"><i>Note: Mail by Victor Stinner, <a href="https://mail.python.org/archives/list/python-dev@python.org/message/TYHN7S3BEW7E3LAGAESZFYHPVP5MRI42/">src</a></i></span>
+         </p>
+           
+
+      <p>
+        <p>For me, deprecated functions cause me a lot of thinking when I met
+them as a Python maintainer and as a Python user. Why is it still
+there? What is its purpose? Is there a better alternative? It&rsquo;s
+related to the Chesterton&rsquo;s fence principle. Sometimes, reading the
+doc is enough. Sometimes, I have to dig into the bug tracker and the
+Git history.</p>
+<p>In Python, usually, there is a better alternative. A recent example is
+the asyncore module that I&rsquo;m proposing to remove. This module has
+multiple design flaws which cause bugs in corner cases. It&rsquo;s somehow
+dangerous to use this module. Deprecating the module doesn&rsquo;t help
+users who continue to use it and may get bugs in production. Removing
+the module forces user to think about why they chose asyncore and if
+they can switch to a better alternative. It&rsquo;s supposed to help users
+to avoid bugs.</p>
+<p>The gray area is more about &ldquo;deprecated aliases&rdquo; and having two ways
+to do the same things, but one way is deprecated. One example is the
+removal of collections.MutableMapping: you must now use
+collections.abc.MutableMapping. Another example is the removal the &ldquo;U&rdquo;
+mode in the open() function: the flag was simply ignored since Python
+3.0. So far, the trend is to remove these &ldquo;aliases&rdquo; and force users to
+upgrade this code. Not removing these aliases has been discussed, and
+it seems like each time, it was decided to remove them. Usually, the
+&ldquo;old way&rdquo; is deprecated for many Python versions, like 5 years if not
+longer.</p>
+<p>Using deprecated functions is a threat in terms of technical debt. An
+application using multiple deprecated functions will break with a
+future Python version. It&rsquo;s safe to avoid deprecated functions
+whenever possible. Some deprecated functions have been removed but
+then restored for 1 or 2 more Python releases, to give more time to
+users to upgrade their code. At the end, the deprecated code is
+removed.</p>
+<p>We can warn developers to pay attention to DeprecationWarning
+warnings, but sadly, in my experience, the removal is the only trigger
+which works for everybody.</p>
+<p>Do you have to repeat &ldquo;You should check for DeprecationWarning in your
+code&rdquo; in every &ldquo;What&rsquo;s New in Python X.Y?&rdquo; document? Python 3.9 has
+such section:
+<a href="https://docs.python.org/dev/whatsnew/3.9.html#you-should-check-for-deprecationwarning-in-your-code">https://docs.python.org/dev/whatsnew/3.9.html#you-should-check-for-deprecationwarning-in-your-code</a></p>
+<p>Victor</p>
       </p>
       <hr>
       </article>
