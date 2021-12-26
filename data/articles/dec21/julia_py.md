@@ -246,8 +246,8 @@ julia> @btime Symbolics.solve_for([x + 3*y ~ 1, x - y ~ 3], [x, y])
  -0.5
 ```
 
-So according to btime this operation takes 90 microseconds. I can only
-presume that the b is short for bullshit because that timing is out by
+So according to btime this operation takes 90 microseconds. <mark>I can only
+presume that the b is short for bullshit</mark> because that timing is out by
 a factor of 1000 compared to a reasonable assessment of how long this
 actually takes (150 milliseconds). The reason btime reports a much
 lower time is because it's repeatedly solving the exact same
