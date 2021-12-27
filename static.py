@@ -1,5 +1,7 @@
 import pathlib
+import calendar
 import sys
+import datetime
 from os.path import join
 import os
 import settings
@@ -47,11 +49,49 @@ context.update({
 })
 
 
+def gen_articles():
+    for file in os.listdir(os.path.join(base_path, 'templates', 'articles')):
+        article_folder = file.strip('.html')
+        try:
+            os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'articles'))
+        except Exception as e:
+            # print(e)
+            pass
+        try:
+            os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'articles', article_folder))
+        except Exception as e:
+            # print(e)
+            pass
 
+        # date_list = article_folder.split('_')
+        date = datetime.datetime.strptime(article_folder, "%d_%m_%Y")
+
+        day_name = calendar.day_name[date.weekday()]
+        month_name = calendar.month_name[date.month]
+        date_edition = f'{day_name} {month_name} {date.day}, {date.year}'
+        context.update({'permalink': f'/articles/{article_folder}', 'display_home': True, 'date_edition': date_edition})
+        generate(f'articles/{file}', 
+            join(settings.OUTPUT_FOLDER, 'articles', f'{article_folder}', 'index.html'), **context)
+
+
+def gen_archives():
+    try:
+        os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'archives'))
+    except Exception as e:
+        # print(e)
+        pass
+
+    articles = os.listdir(os.path.join(base_path, 'templates', 'articles'))
+    context.update({'archive_articles': articles})
+    generate(f'archives.html', 
+        join(settings.OUTPUT_FOLDER, 'archives', 'index.html'), **context)
 def main(args):
     def gen():
-        generate('index.html', join(
+        gen_articles()
+        context.update({'display_home': False})
+        generate(f'articles/{settings.current_edition}.html', join(
             settings.OUTPUT_FOLDER, 'index.html'), **context)
+        gen_archives()
 
     if len(args) > 1 and args[1] == '--server':
         app = Flask(__name__)
