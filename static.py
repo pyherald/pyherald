@@ -11,6 +11,7 @@ from jamstack.api.template import base_context, generate
 from livereload import Server
 
 context = base_context()
+context.update({'path': '/'})
 
 
 base_path = pathlib.Path(__file__).parent.absolute()
@@ -69,7 +70,8 @@ def gen_articles():
         day_name = calendar.day_name[date.weekday()]
         month_name = calendar.month_name[date.month]
         date_edition = f'{day_name} {month_name} {date.day}, {date.year}'
-        context.update({'permalink': f'/articles/{article_folder}', 'display_home': True, 'date_edition': date_edition})
+        context.update({'permalink': f'/articles/{article_folder}', 'display_home': True, 
+            'date_edition': date_edition, 'path': '../../'})
         generate(f'articles/{file}', 
             join(settings.OUTPUT_FOLDER, 'articles', f'{article_folder}', 'index.html'), **context)
 

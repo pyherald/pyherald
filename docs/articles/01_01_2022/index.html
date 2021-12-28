@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" href="{{path}}styles/custom.css">
+  <link rel="stylesheet" href="../../styles/custom.css">
   <title></title>
   <style type="text/css">
     a {
@@ -23,7 +23,7 @@
 <section class="section">
   <hr>
 
-{{date_edition}} | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="{{permalink}}">permalink</a>{% if display_home %} | <a href="/">home</a> {% endif %}
+Saturday January 1, 2022 | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="/articles/01_01_2022">permalink</a> | <a href="/">home</a> 
 
 <hr>
 
@@ -39,9 +39,20 @@
 <!-- END: Benchmark Email Signup Form Code -->
 
 <hr>
-      {% for note in sidebar %}
-      <p>█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}, <a href="{{ note['source'] }}">src</a></i></span></p>
-      {% endfor %}
+      
+      <p>█ <p>The Steering Council now consists of:</p>
+<ul>
+<li>Pablo Galindo Salgado</li>
+<li>Petr Viktorin</li>
+<li>Thomas Wouters</li>
+<li>Gregory P. Smith</li>
+<li>Brett Cannon</li>
+</ul> <span class="is-size-7"><i>PSF, <a href="https://twitter.com/ThePSF/status/1471454352837689352?s=20">src</a></i></span></p>
+      
+      <p>█ <p>WASM support in CPython increases by leaps and bounds.</p> <span class="is-size-7"><i>Thanks @Manjusaka_Lee for the tip, <a href="https://bugs.python.org/issue40280">src</a></i></span></p>
+      
+      <p>█ <p>Georgi Ker Awarded the PSF Community Service Award for Q4 2020</p> <span class="is-size-7"><i>PSF, <a href="https://pyfound.blogspot.com/2021/12/georgi-ker-awarded-psf-community.html">src</a></i></span></p>
+      
 
 <hr>
     </div>
@@ -49,20 +60,97 @@
   <div class="tile is-parent">
     <div class="tile is-child box p-6" style="overflow-wrap: break-word;   word-break: break-all;text-align: justify;
   text-justify: inter-word;">
-      {% for article in articles %}
+      
       <article class="article_cust">
-         <p class="title">{{article['title']}} <br> 
-<span class="is-size-7"><i>{{ article['note'] }}, <a href="{{ article['source'] }}">src</a></i></span>
+         <p class="title">The List of Active Core Devs <br> 
+<span class="is-size-7"><i>Finally brought to light, <a href="https://www.python.org/dev/peps/pep-8103/#active-python-core-developers">src</a></i></span>
          </p>
            
 
       <p>
-        {{article['html'] | safe}}
+        <p>It was always frustrating to look out for active Python core devs. Here&rsquo;s the complete list:</p>
+<pre><code>Abhilash Raj
+Alex Gaynor
+Ammar Askar
+Andrew Kuchling
+Andrew Svetlov
+Antoine Pitrou
+Barry Warsaw
+Batuhan Taskaya
+Benjamin Peterson
+Berker Peksağ
+Brandt Bucher
+Brett Cannon
+Brian Curtin
+Brian Quinlan
+Carol Willing
+Cheryl Sabella
+Chris Jerdonek
+Chris Withers
+Christian Heimes
+Dino Viehland
+Dong-hee Na
+Éric Araujo
+Eric Snow
+Eric V. Smith
+Ethan Furman
+Facundo Batista
+Fred Drake
+Giampaolo Rodolà
+Gregory P. Smith
+Guido van Rossum
+Hynek Schlawack
+Inada Naoki
+Irit Katriel
+Ivan Levkivskyi
+Jason R. Coombs
+Jeremy Kloth
+Jesús Cea
+Joannah Nanjekye
+Julien Palard
+Karthikeyan Singaravelan
+Ken Jin
+Kushal Das
+Kyle Stanley
+Larry Hastings
+Lisa Roach
+Łukasz Langa
+Lysandros Nikolaou
+Marc-André Lemburg
+Mariatta
+Mark Dickinson
+Mark Shannon
+Nathaniel J. Smith
+Ned Deily
+Neil Schemenauer
+Nick Coghlan
+Pablo Galindo
+Paul Ganssle
+Paul Moore
+Petr Viktorin
+Raymond Hettinger
+Ronald Oussoren
+Senthil Kumaran
+Serhiy Storchaka
+Stefan Behnel
+Stéphane Wirtel
+Steve Dower
+Tal Einat
+Terry Jan Reedy
+Thomas Wouters
+Tim Golden
+Tim Peters
+Victor Stinner
+Vinay Sajip
+Xiang Zhang
+Yury Selivanov
+Zachary Ware
+</code></pre>
       </p>
       <hr>
       </article>
      
-      {% endfor %}
+      
     </div>
   </div>
 </div>
