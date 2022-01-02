@@ -40,10 +40,12 @@
 
 <hr>
       {% for note in sidebar %}
-      <p>█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}, <a href="{{ note['source'] }}">src</a></i></span></p>
+      <p class="sidebar_elem">█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}, <a href="{{ note['source'] }}">src</a></i></span></p>
       {% endfor %}
 
 <hr>
+
+{%block sidebar_raw%}{%endblock%}
     </div>
   </div>
   <div class="tile is-parent">
@@ -52,7 +54,7 @@
       {% for article in articles %}
       <article class="article_cust">
          <p class="title">{{article['title']}} <br> 
-<span class="is-size-7"><i>{{ article['note'] }}, <a href="{{ article['source'] }}">src</a></i></span>
+<span class="note is-size-7"><i>{{ article['note'] }}, <a href="{{ article['source'] }}">src</a></i></span>
          </p>
            
 
