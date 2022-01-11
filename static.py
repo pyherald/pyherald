@@ -113,7 +113,10 @@ def gen_rss():
 def main(args):
     def gen():
         gen_articles()
-        context.update({'display_home': False, 'date_edition': day_name_from_article_ref(settings.current_edition)})
+        context.update({
+            'display_home': False, 
+            'date_edition': day_name_from_article_ref(settings.current_edition),
+            'permalink': f'/articles/{settings.current_edition}'})
         generate(f'articles/{settings.current_edition}.html', join(
             settings.OUTPUT_FOLDER, 'index.html'), **context)
         gen_archives()
