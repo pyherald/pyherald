@@ -13,3 +13,8 @@
 	padding-top: 10px;
 	font-size: 15px;
 }
+
+
+p {
+	hyphens: auto !important;
+}

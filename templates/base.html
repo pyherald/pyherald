@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="{{path}}styles/custom.css">
+  <link rel="alternate" type="application/rss+xml" title="PyHerald Feed" href="{{path}}rss.xml" />
   <title></title>
   <style type="text/css">
     a {
@@ -23,7 +24,7 @@
 <section class="section">
   <hr>
 
-{{date_edition}} | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="{{permalink}}">permalink</a>{% if display_home %} | <a href="/">home</a> {% endif %}
+{{ date_edition }} | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="{{permalink}}">permalink</a>{% if display_home %} | <a href="/">home</a> {% endif %}
 
 <hr>
 
@@ -54,7 +55,13 @@
       {% for article in articles %}
       <article class="article_cust">
          <p class="title">{{article['title']}} <br> 
-<span class="note is-size-7"><i>{{ article['note'] }}, <a href="{{ article['source'] }}">src</a></i></span>
+<span class="note is-size-7"><i>{{ article['note'] }} 
+
+  {% if article['source'] != '---' %}
+  , <a href="{{ article['source'] }}">src</a>
+  {% endif %}
+
+</i></span>
          </p>
            
 

@@ -18,6 +18,15 @@ base_path = pathlib.Path(__file__).parent.absolute()
 
 
 
+def day_name_from_article_ref(folder_name):
+    date = datetime.datetime.strptime(folder_name, "%d_%m_%Y")
+
+    day_name = calendar.day_name[date.weekday()]
+    month_name = calendar.month_name[date.month]
+    date_edition = f'{day_name} {month_name} {date.day}, {date.year}'
+
+    return date_edition
+
 
 def article_info(article):
     with open(os.path.join(base_path, 'data', 'articles', article.removesuffix('.md')+'.md'), encoding="utf-8") as f:
@@ -65,11 +74,7 @@ def gen_articles():
             pass
 
         # date_list = article_folder.split('_')
-        date = datetime.datetime.strptime(article_folder, "%d_%m_%Y")
-
-        day_name = calendar.day_name[date.weekday()]
-        month_name = calendar.month_name[date.month]
-        date_edition = f'{day_name} {month_name} {date.day}, {date.year}'
+        date_edition = day_name_from_article_ref(article_folder)
         context.update({'permalink': f'/articles/{article_folder}', 'display_home': True, 
             'date_edition': date_edition, 'path': '../../'})
         generate(f'articles/{file}', 
@@ -87,13 +92,32 @@ def gen_archives():
     context.update({'archive_articles': articles})
     generate(f'archives.html', 
         join(settings.OUTPUT_FOLDER, 'archives', 'index.html'), **context)
+
+
+def gen_rss():
+    articles = os.listdir(os.path.join(base_path, 'templates', 'articles'))
+    items = []
+    for article in articles:
+        article_ref = article.removesuffix('.html')
+        items.append({
+            'link': f'https://pyherald.com/articles/{article_ref}',
+            'title': day_name_from_article_ref(article_ref)
+            })
+
+        context = {}
+        context.update({'items': items})
+        generate('rss.xml', 
+            join(settings.OUTPUT_FOLDER, 'rss.xml'), **context)
+
+
 def main(args):
     def gen():
         gen_articles()
-        context.update({'display_home': False})
+        context.update({'display_home': False, 'date_edition': day_name_from_article_ref(settings.current_edition)})
         generate(f'articles/{settings.current_edition}.html', join(
             settings.OUTPUT_FOLDER, 'index.html'), **context)
         gen_archives()
+        gen_rss()
 
     if len(args) > 1 and args[1] == '--server':
         app = Flask(__name__)
