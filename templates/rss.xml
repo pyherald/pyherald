@@ -1,11 +1,18 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0">
+<title>PyHerald Feed</title>
+<link>https://pyherald.com/</link>
+<description>PythonLand's Newspaper</description>
+<lastBuildDate>{{ last_build_date }}</lastBuildDate>
+<language>en-us</language>
 <channel>
 {% for item in items %}
 	<item>
 	<title>{{ item['title'] }}</title>
 	<link>{{ item['link'] }}</link>
 	<description>{{ item['description'] }}</description>
+	<guid>{{ item['link'] }}</guid>
+	<pubDate>{{ item['title'] }}</pubDate>
 	</item>
 {% endfor %}
 </channel>

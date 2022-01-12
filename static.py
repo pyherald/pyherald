@@ -121,7 +121,9 @@ def gen_rss():
             })
 
         context = {}
-        context.update({'items': items})
+        now = datetime.datetime.now()
+        last_build_date = now.strftime("%d/%m/%Y %H:%M:%S") + ' GMT+4'
+        context.update({'items': items, 'last_build_date': last_build_date})
         generate('rss.xml', 
             join(settings.OUTPUT_FOLDER, 'rss.xml'), **context)
 
