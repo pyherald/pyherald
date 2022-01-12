@@ -9,6 +9,7 @@ import markdown
 from flask import Flask
 from jamstack.api.template import base_context, generate
 from livereload import Server
+from data.data import infos as data_infos
 
 context = base_context()
 context.update({'path': '/'})
@@ -17,7 +18,13 @@ context.update({'path': '/'})
 base_path = pathlib.Path(__file__).parent.absolute()
 
 
-
+def get_description(article_ref):
+    infos = data_infos[article_ref]['article']
+    titles = []
+    for info in infos:
+        title = article_info(info)['title']
+        titles.append(title)
+    return 'Main titles for this edition: '+ ', '.join(titles)
 def day_name_from_article_ref(folder_name):
     date = datetime.datetime.strptime(folder_name, "%d_%m_%Y")
 
@@ -75,8 +82,16 @@ def gen_articles():
 
         # date_list = article_folder.split('_')
         date_edition = day_name_from_article_ref(article_folder)
-        context.update({'permalink': f'/articles/{article_folder}', 'display_home': True, 
-            'date_edition': date_edition, 'path': '../../'})
+        article_data = data_infos[article_folder]['article']
+        sidebar_data = data_infos[article_folder]['sidebar']
+        context.update({
+            'permalink': f'/articles/{article_folder}', 
+            'display_home': True, 
+            'date_edition': date_edition, 
+            'path': '../../', 
+            'articles': [article_info(a) for a in article_data],
+            'sidebar': [article_info(a) for a in sidebar_data]
+            })
         generate(f'articles/{file}', 
             join(settings.OUTPUT_FOLDER, 'articles', f'{article_folder}', 'index.html'), **context)
 
@@ -101,7 +116,8 @@ def gen_rss():
         article_ref = article.removesuffix('.html')
         items.append({
             'link': f'https://pyherald.com/articles/{article_ref}',
-            'title': day_name_from_article_ref(article_ref)
+            'title': day_name_from_article_ref(article_ref),
+            'description': get_description(article_ref)
             })
 
         context = {}
@@ -109,16 +125,26 @@ def gen_rss():
         generate('rss.xml', 
             join(settings.OUTPUT_FOLDER, 'rss.xml'), **context)
 
+def gen_homepage():
+    article_data = data_infos[settings.current_edition]['article']
+    sidebar_data = data_infos[settings.current_edition]['sidebar']
+    context.update({
+        'display_home': False, 
+        'date_edition': day_name_from_article_ref(settings.current_edition),
+        'permalink': f'/articles/{settings.current_edition}',
+        'articles': [article_info(a) for a in article_data],
+        'sidebar': [article_info(a) for a in sidebar_data]
+        })
+    generate(f'articles/{settings.current_edition}.html', join(
+        settings.OUTPUT_FOLDER, 'index.html'), **context)
+
+
 
 def main(args):
     def gen():
         gen_articles()
-        context.update({
-            'display_home': False, 
-            'date_edition': day_name_from_article_ref(settings.current_edition),
-            'permalink': f'/articles/{settings.current_edition}'})
-        generate(f'articles/{settings.current_edition}.html', join(
-            settings.OUTPUT_FOLDER, 'index.html'), **context)
+
+        gen_homepage()
         gen_archives()
         gen_rss()
 

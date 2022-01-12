@@ -5,6 +5,7 @@
 	<item>
 	<title>{{ item['title'] }}</title>
 	<link>{{ item['link'] }}</link>
+	<description>{{ item['description'] }}</description>
 	</item>
 {% endfor %}
 </channel>

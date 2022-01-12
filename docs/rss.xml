@@ -5,16 +5,19 @@
 	<item>
 	<title>Wednesday January 12, 2022</title>
 	<link>https://pyherald.com/articles/12_01_2022</link>
+	<description>Main titles for this edition: HTMX: How Python Fueled the Rise of a JS Lib, Normalisation In Distribution Filenames: Yet Another Packaging Vagary, Solving Local File Overshadowing Library Name, What's Happening in PythonLand?</description>
 	</item>
 
 	<item>
 	<title>Friday December 24, 2021</title>
 	<link>https://pyherald.com/articles/24_12_2021</link>
+	<description>Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions</description>
 	</item>
 
 	<item>
 	<title>Sunday January 2, 2022</title>
 	<link>https://pyherald.com/articles/02_01_2022</link>
+	<description>Main titles for this edition: Why Python Matters for the VR Community, Representing Numbers: The Complexity Behind, Frozenset Can Be Altered by |=, The List of Active Core Devs</description>
 	</item>
 
 </channel>
