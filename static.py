@@ -9,7 +9,9 @@ import markdown
 from flask import Flask
 from jamstack.api.template import base_context, generate
 from livereload import Server
+from email import utils as emailutils
 from data.data import infos as data_infos
+import time
 
 context = base_context()
 context.update({'path': '/'})
@@ -114,15 +116,28 @@ def gen_rss():
     items = []
     for article in articles:
         article_ref = article.removesuffix('.html')
+
+
+        # %Y-%m-%dT%H:%M:%S.%f%z
+        now = datetime.datetime.strptime(article_ref, f'%d_%m_%Y')
+        nowtuple = now.timetuple()
+        nowtimestamp = time.mktime(nowtuple)
+        rfc822 = emailutils.formatdate(nowtimestamp)
+        pub_date = rfc822
+
         items.append({
             'link': f'https://pyherald.com/articles/{article_ref}',
             'title': day_name_from_article_ref(article_ref),
-            'description': get_description(article_ref)
+            'description': get_description(article_ref),
+            'pub_date': pub_date
             })
 
         context = {}
         now = datetime.datetime.now()
-        last_build_date = now.strftime("%d/%m/%Y %H:%M:%S") + ' GMT+4'
+        nowtuple = now.timetuple()
+        nowtimestamp = time.mktime(nowtuple)
+        rfc822 = emailutils.formatdate(nowtimestamp)
+        last_build_date = rfc822
         context.update({'items': items, 'last_build_date': last_build_date})
         generate('rss.xml', 
             join(settings.OUTPUT_FOLDER, 'rss.xml'), **context)
