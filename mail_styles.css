@@ -60,3 +60,9 @@
      white-space: -o-pre-wrap;
      word-wrap: break-word;
  }
+
+
+     p.title{
+      
+      margin-top: 0; 
+    }
