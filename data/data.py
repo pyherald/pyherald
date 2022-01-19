@@ -51,4 +51,21 @@ infos = {
 			'jan22/pack_man_dec'
 		]
 	},
+	'20_01_2022': {
+		'article': [
+			'jan22/asserts',
+			'jan22/new_dep',
+			'jan22/types',
+			'jan22/tour_20'
+
+		],
+		'sidebar': [
+			'jan22/elastic',
+			'jan22/cardio',
+			'jan22/malcolm',
+			'jan22/lox',
+			'jan22/sketchedit',
+			'jan22/fare'
+		]
+	},
 }

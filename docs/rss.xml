@@ -4,7 +4,7 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Wed, 12 Jan 2022 22:04:34 -0000</lastBuildDate>
+	<lastBuildDate>Wed, 19 Jan 2022 23:06:27 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -22,6 +22,14 @@
 		<description>Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions</description>
 		<guid>https://pyherald.com/articles/24_12_2021</guid>
 		<pubDate>Thu, 23 Dec 2021 20:00:00 -0000</pubDate>
+	</item>
+
+	<item>
+		<title>Thursday January 20, 2022</title>
+		<link>https://pyherald.com/articles/20_01_2022</link>
+		<description>Main titles for this edition: Asserts Beyond Tests: Good or Evil?, When Dependencies Bite!, Type Checking: What To Read To Stay Updated?, What's Happening in PythonLand?</description>
+		<guid>https://pyherald.com/articles/20_01_2022</guid>
+		<pubDate>Wed, 19 Jan 2022 20:00:00 -0000</pubDate>
 	</item>
 
 	<item>

@@ -17,4 +17,23 @@
 
 p {
 	hyphens: auto !important;
+
+}
+
+
+blockquote{
+	background-color: #f6f8fa !important;
+	padding:  10px !important;
+	border-left:  5px solid darkgray !important;
+}
+
+
+
+pre {
+  overflow-x: auto;
+  white-space: pre-wrap;
+  white-space: -moz-pre-wrap;
+  white-space: -pre-wrap;
+  white-space: -o-pre-wrap;
+  word-wrap: break-word;
 }

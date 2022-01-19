@@ -41,7 +41,9 @@
 
 <hr>
       {% for note in sidebar %}
-      <p class="sidebar_elem">█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}, <a href="{{ note['source'] }}">src</a></i></span></p>
+      <p class="sidebar_elem">█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}{% if note['source'] != '---' %}
+  , <a href="{{ note['source'] }}">src</a>
+  {% endif %}</i></span></p>
       {% endfor %}
 
 <hr>
