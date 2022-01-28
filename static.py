@@ -12,6 +12,8 @@ from livereload import Server
 from email import utils as emailutils
 from data.data import infos as data_infos
 import time
+import urllib.parse
+import html
 
 context = base_context()
 context.update({'path': '/'})
@@ -129,7 +131,9 @@ def gen_rss():
             'link': f'https://pyherald.com/articles/{article_ref}',
             'title': day_name_from_article_ref(article_ref),
             'description': get_description(article_ref),
-            'pub_date': pub_date
+            'pub_date': pub_date,
+            'author': html.escape(data_infos[article_ref]['author']),
+            'media': urllib.parse.quote_plus(data_infos[article_ref]['media']),
             })
 
         context = {}

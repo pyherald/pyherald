@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://www.pyherald.com/">
 <channel>
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
@@ -11,9 +11,11 @@
 	<item>
 		<title>{{ item['title'] }}</title>
 		<link>{{ item['link'] }}</link>
-		<description>{{ item['description'] }}</description>
+		<description><![CDATA[{{ item['description'] }}]]></description>
 		<guid>{{ item['link'] }}</guid>
 		<pubDate>{{ item['pub_date'] }}</pubDate>
+		<dc:creator><![CDATA[ {{ item['author'] }} ]]></dc:creator>
+		<enclosure url="{{ item['media'] }}" length="1000" type="image/jpeg" />
 	</item>
 {% endfor %}
 </channel>

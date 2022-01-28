@@ -14,7 +14,9 @@ infos = {
 			'dec21/next_cord',
 			'dec21/late_bound_arg',
 			'dec21/toml_std'
-		]
+		],
+		'author': 'Abdur-Rahmaan Janhangeer',
+		'media': 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
 	},
 	'02_01_2022': {
 		'article': [
@@ -31,7 +33,9 @@ infos = {
 			'jan22/power_bi',
 			'jan22/steering',
 			'jan22/com_serv'
-		]
+		],
+		'author': 'Abdur-Rahmaan Janhangeer',
+		'media': 'https://images.unsplash.com/photo-1617802690658-1173a812650d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
 	},
 	'12_01_2022': {
 		'article': [
@@ -49,7 +53,9 @@ infos = {
 			'jan22/blender',
 			'jan22/decorators',
 			'jan22/pack_man_dec'
-		]
+		],
+		'author': 'Abdur-Rahmaan Janhangeer',
+		'media': 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
 	},
 	'20_01_2022': {
 		'article': [
@@ -66,7 +72,9 @@ infos = {
 			'jan22/lox',
 			'jan22/sketchedit',
 			'jan22/fare'
-		]
+		],
+		'author': 'Abdur-Rahmaan Janhangeer',
+		'media': 'https://images.unsplash.com/photo-1468657988500-aca2be09f4c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80'
 	},
 	'28_01_2022': {
 		'article': [
@@ -85,6 +93,8 @@ infos = {
 			'jan22/pandasfword',
 			'jan22/beazley_ramalho',
 			'jan22/pywin',
-		]
+		],
+		'author': 'Abdur-Rahmaan Janhangeer',
+		'media': 'https://images.unsplash.com/photo-1624705002806-5d72df19c3ad?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80'
 	},
 }
