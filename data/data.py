@@ -68,4 +68,23 @@ infos = {
 			'jan22/fare'
 		]
 	},
+	'28_01_2022': {
+		'article': [
+			'jan22/wasm2',
+			'jan22/asyncio',
+			'jan22/warnings',
+			'jan22/news28',
+
+		],
+		'sidebar': [
+			'jan22/screen_recorder',
+			'jan22/deep',
+			'jan22/animation',
+			'jan22/idle',
+			'jan22/edgedb',
+			'jan22/pandasfword',
+			'jan22/beazley_ramalho',
+			'jan22/pywin',
+		]
+	},
 }

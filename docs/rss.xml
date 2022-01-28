@@ -4,7 +4,7 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Wed, 19 Jan 2022 23:06:27 -0000</lastBuildDate>
+	<lastBuildDate>Fri, 28 Jan 2022 03:59:23 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -14,6 +14,14 @@
 		<description>Main titles for this edition: HTMX: How Python Fueled the Rise of a JS Lib, Normalisation In Distribution Filenames: Yet Another Packaging Vagary, Solving Local File Overshadowing Library Name, What's Happening in PythonLand?</description>
 		<guid>https://pyherald.com/articles/12_01_2022</guid>
 		<pubDate>Tue, 11 Jan 2022 20:00:00 -0000</pubDate>
+	</item>
+
+	<item>
+		<title>Friday January 28, 2022</title>
+		<link>https://pyherald.com/articles/28_01_2022</link>
+		<description>Main titles for this edition: CPython's main branch now compiles to webassembly!, The Perfect Example To Understand AsyncIO, Don't Shut Up Warnings You Don't Care About, What's happening in PythonLand?</description>
+		<guid>https://pyherald.com/articles/28_01_2022</guid>
+		<pubDate>Thu, 27 Jan 2022 20:00:00 -0000</pubDate>
 	</item>
 
 	<item>
