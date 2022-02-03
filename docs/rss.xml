@@ -4,7 +4,7 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Fri, 28 Jan 2022 11:45:27 -0000</lastBuildDate>
+	<lastBuildDate>Thu, 03 Feb 2022 22:16:46 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -26,6 +26,16 @@
 		<pubDate>Thu, 27 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
 		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1624705002806-5d72df19c3ad%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1032%26q%3D80" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Friday February 4, 2022</title>
+		<link>https://pyherald.com/articles/04_02_2022</link>
+		<description><![CDATA[Main titles for this edition: Why No C++ For The CPython Codebase, What's New In Django Security Releases, David Beazley: When I Was A Nobody, PyPy on PySide6 is there: PyPy with a Gui, C API: The ABI Masterplan, What's Happening in PythonLand]]></description>
+		<guid>https://pyherald.com/articles/04_02_2022</guid>
+		<pubDate>Thu, 03 Feb 2022 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
+		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1587620962725-abab7fe55159%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1031%26q%3D80" length="1000" type="image/jpeg" />
 	</item>
 
 	<item>
