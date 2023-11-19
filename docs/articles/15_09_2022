@@ -1,0 +1,26 @@
+# Can Python open an **E-signature** pdf?
+by *Hazrat Abdul*
+Source:- [https://discuss.python.org/t/not-able-to-read-the-pdf-files/18899]
+
+I came across this convo-thread, and a guy was asking how to open an **E-Signature pdf** file.  
+
+python's standard library doesn't provide any packages that can open an **E-sign pdf**<br/>It is not surprising to find a set of PDF files which don’t work using techniques that worked for a **Basic PDF file.**<br/> but It is  disappointing finding not even packages like [Third-party-packages](https://pypi.org/search/?q=PDF). can't do the job,  C++, C# includes in-built packages to deal with almost any type of file.
+
+## Cryptography: The  Next Option <br/>
+in computer science, cryptography refers to secure information and communication techniques derived from mathematical concepts and a set of rule-based calculations called algorithms, to transform messages in ways that are hard to decipher.
+
+Python includes a package called **cryptography** which provides cryptographic recipes and primitives. It supports Python 2.7, Python 3.4+, and PyPy 5.3+ 
+
+a suitable Algorithm for **breaking an E-pdf** is **AES**   Advanced Encryption Standard.<br/>
+in short, AES is a  **symmetric**  type of encryption, as it uses the same key to both encrypt and decrypt data.
+It also uses the SPN (substitution permutation network) algorithm, applying multiple rounds to encrypt data. These encryption rounds are the reason behind the impenetrability of AES, as there are far too many rounds to break through.
+
+Unfortunately, AES is not available in any of the python libraries.
+
+so it would be a nice start for a python enthusiast to build a package to deal with this deficiency.
+
+refer to these to get started!
+- [Third-party-packages](https://pypi.org/search/?q=PDF)
+- [Cryptography package](https://cryptography.io/en/latest/)
+- [AES](https://cybernews.com/resources/what-is-aes-encryption/)
+- [Book on breaking encryption](https://cybernews.com/resources/what-is-aes-encryption/)
