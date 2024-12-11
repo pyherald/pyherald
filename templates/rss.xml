@@ -14,7 +14,7 @@
 		<description><![CDATA[{{ item['description'] }}]]></description>
 		<guid>{{ item['link'] }}</guid>
 		<pubDate>{{ item['pub_date'] }}</pubDate>
-		<dc:creator><![CDATA[ {{ item['author'] }} ]]></dc:creator>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
 		<enclosure url="{{ item['media'] }}" length="1000" type="image/jpeg" />
 	</item>
 {% endfor %}

@@ -54,7 +54,7 @@
   text-justify: inter-word;">
       {% for article in archive_articles %}
       {% set aname = article.strip('.html') %}
-        <p><a href="/articles/{{aname}}">{{aname}}</a></p>
+        <p><a href="/articles/{{aname}}">{{day_name_from_article_ref(aname)}}</a></p>
       
       {% endfor %}
     </div>

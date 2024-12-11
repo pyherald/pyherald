@@ -4,68 +4,78 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Thu, 03 Feb 2022 22:16:46 -0000</lastBuildDate>
+	<lastBuildDate>Wed, 11 Dec 2024 16:20:40 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
 	<item>
-		<title>Wednesday January 12, 2022</title>
-		<link>https://pyherald.com/articles/12_01_2022</link>
-		<description><![CDATA[Main titles for this edition: HTMX: How Python Fueled the Rise of a JS Lib, Normalisation In Distribution Filenames: Yet Another Packaging Vagary, Solving Local File Overshadowing Library Name, What's Happening in PythonLand?]]></description>
-		<guid>https://pyherald.com/articles/12_01_2022</guid>
-		<pubDate>Tue, 11 Jan 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1526374965328-7f61d4dc18c5%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D870%26q%3D80" length="1000" type="image/jpeg" />
+		<title>Thursday January 20, 2022</title>
+		<link>https://pyherald.com/articles/20_01_2022</link>
+		<description><![CDATA[Main titles for this edition: Asserts, When, Type, What's, -------, -------, ---, -------, ---, -------]]></description>
+		<guid>https://pyherald.com/articles/20_01_2022</guid>
+		<pubDate>Wed, 19 Jan 2022 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
 
 	<item>
 		<title>Friday January 28, 2022</title>
 		<link>https://pyherald.com/articles/28_01_2022</link>
-		<description><![CDATA[Main titles for this edition: CPython's main branch now compiles to webassembly!, The Perfect Example To Understand AsyncIO, Don't Shut Up Warnings You Don't Care About, What's happening in PythonLand?]]></description>
+		<description><![CDATA[Main titles for this edition: CPython's, The, Don't, What's, -------, -------, -------, -------, -------, -------, -------, -------]]></description>
 		<guid>https://pyherald.com/articles/28_01_2022</guid>
 		<pubDate>Thu, 27 Jan 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1624705002806-5d72df19c3ad%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1032%26q%3D80" length="1000" type="image/jpeg" />
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
 
 	<item>
-		<title>Friday February 4, 2022</title>
-		<link>https://pyherald.com/articles/04_02_2022</link>
-		<description><![CDATA[Main titles for this edition: Why No C++ For The CPython Codebase, What's New In Django Security Releases, David Beazley: When I Was A Nobody, PyPy on PySide6 is there: PyPy with a Gui, C API: The ABI Masterplan, What's Happening in PythonLand]]></description>
-		<guid>https://pyherald.com/articles/04_02_2022</guid>
-		<pubDate>Thu, 03 Feb 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1587620962725-abab7fe55159%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1031%26q%3D80" length="1000" type="image/jpeg" />
+		<title>Tuesday December 10, 2024</title>
+		<link>https://pyherald.com/articles/10_12_2024</link>
+		<description><![CDATA[Main titles for this edition: On, A, Separating, The, Sebastian, Astral, JetBrains,, Python, 2024, Django, EVENTS, JOBS]]></description>
+		<guid>https://pyherald.com/articles/10_12_2024</guid>
+		<pubDate>Mon, 09 Dec 2024 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Wednesday January 12, 2022</title>
+		<link>https://pyherald.com/articles/12_01_2022</link>
+		<description><![CDATA[Main titles for this edition: HTMX:, Normalisation, Solving, What's, Pattern, Taichi, MMOCR:, Leveraging, CS50's, A, Six, Packaging]]></description>
+		<guid>https://pyherald.com/articles/12_01_2022</guid>
+		<pubDate>Tue, 11 Jan 2022 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
 
 	<item>
 		<title>Friday December 24, 2021</title>
 		<link>https://pyherald.com/articles/24_12_2021</link>
-		<description><![CDATA[Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions]]></description>
+		<description><![CDATA[Main titles for this edition: So,, Fredrik, Instagram:, Preventing, Why, Best, HTMX, Discord.py's, PEP, Why]]></description>
 		<guid>https://pyherald.com/articles/24_12_2021</guid>
 		<pubDate>Thu, 23 Dec 2021 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1587620962725-abab7fe55159%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D1031%26q%3D80" length="1000" type="image/jpeg" />
-	</item>
-
-	<item>
-		<title>Thursday January 20, 2022</title>
-		<link>https://pyherald.com/articles/20_01_2022</link>
-		<description><![CDATA[Main titles for this edition: Asserts Beyond Tests: Good or Evil?, When Dependencies Bite!, Type Checking: What To Read To Stay Updated?, What's Happening in PythonLand?]]></description>
-		<guid>https://pyherald.com/articles/20_01_2022</guid>
-		<pubDate>Wed, 19 Jan 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1468657988500-aca2be09f4c6%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D870%26q%3D80" length="1000" type="image/jpeg" />
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
 
 	<item>
 		<title>Sunday January 2, 2022</title>
 		<link>https://pyherald.com/articles/02_01_2022</link>
-		<description><![CDATA[Main titles for this edition: Why Python Matters for the VR Community, Representing Numbers: The Complexity Behind, Frozenset Can Be Altered by |=, The List of Active Core Devs]]></description>
+		<description><![CDATA[Main titles for this edition: Why, Representing, Frozenset, The, Book, Learn, WASM, SEA:, You, Steering, Georgi]]></description>
 		<guid>https://pyherald.com/articles/02_01_2022</guid>
 		<pubDate>Sat, 01 Jan 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ Abdur-Rahmaan Janhangeer ]]></dc:creator>
-		<enclosure url="https%3A%2F%2Fimages.unsplash.com%2Fphoto-1617802690658-1173a812650d%3Fixlib%3Drb-1.2.1%26ixid%3DMnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8%26auto%3Dformat%26fit%3Dcrop%26w%3D870%26q%3D80" length="1000" type="image/jpeg" />
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Friday February 4, 2022</title>
+		<link>https://pyherald.com/articles/04_02_2022</link>
+		<description><![CDATA[Main titles for this edition: Why, What's, David, PyPy, C, What's, Black, Geospatial, Quarto:, 7, Debian, Meta, Rich-cli:, How, Rich]]></description>
+		<guid>https://pyherald.com/articles/04_02_2022</guid>
+		<pubDate>Thu, 03 Feb 2022 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
 
 </channel>

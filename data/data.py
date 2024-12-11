@@ -1,5 +1,15 @@
 
 infos = {
+    '20_11_2023': {
+            'article': [
+
+            ],
+            'sidebar': [
+
+            ],
+            'author': 'Abdur-Rahmaan Janhangeer',
+            'media': 'https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80'
+    },
     '04_02_2022': {
             'article': [
                 'feb22/cpp',
