@@ -45,11 +45,11 @@
 {% include 'sections/rss_follow.html' %}
 
 <hr>
-      {% for note in sidebar %}
-      <p class="sidebar_elem">█ {{ note['html'] | safe }} <span class="is-size-7"><i>{{ note['note'] }}{% if note['source'] != '---' %}
-  , <a href="{{ note['source'] }}">src</a>
-  {% endif %}</i></span></p>
-      {% endfor %}
+
+    <div class="sidebar">
+      {{sidebar | safe}}
+    </div>
+      
 
 <hr>
 
@@ -59,26 +59,11 @@
   <div class="tile is-parent">
     <div class="tile is-child box p-6" style="overflow-wrap: break-word;   word-break: break-all;text-align: justify;
   text-justify: inter-word;">
-      {% for article in articles %}
-      <article class="article_cust">
-         <p class="title">{{article['title']}} <br> 
-<span class="note is-size-7"><i>{{ article['note'] }} 
-
-  {% if article['source'] != '---' %}
-  , <a href="{{ article['source'] }}">src</a>
-  {% endif %}
-
-</i></span>
-         </p>
-           
-
-      <p>
-        {{article['html'] | safe}}
-      </p>
-      <hr>
+      <article>
+        {{article | safe}}
       </article>
-     
-      {% endfor %}
+  
+
     </div>
   </div>
 </div>

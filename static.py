@@ -23,12 +23,22 @@ base_path = pathlib.Path(__file__).parent.absolute()
 
 
 def get_description(article_ref):
-    infos = data_infos[article_ref]['article']
     titles = []
-    for info in infos:
-        title = article_info(info)['title']
-        titles.append(title)
+    with open(f'data/editions/{article_ref}/main.md') as f:
+        markdown = f.read().split('\n')
+        for line in markdown:
+            if line.strip().startswith('##'):
+                title = line.strip().split()[1]
+                titles.append(title)
+    with open(f'data/editions/{article_ref}/sidebar.md') as f:
+        markdown = f.read().split('\n')
+        for line in markdown:
+            if line.strip().startswith('##'):
+                title = line.strip().split()[1]
+                titles.append(title)
+
     return 'Main titles for this edition: '+ ', '.join(titles)
+
 def day_name_from_article_ref(folder_name):
     date = datetime.datetime.strptime(folder_name, "%d_%m_%Y")
 
@@ -39,65 +49,50 @@ def day_name_from_article_ref(folder_name):
     return date_edition
 
 
-def article_info(article):
-    with open(os.path.join(base_path, 'data', 'articles', article.removesuffix('.md')+'.md'), encoding="utf-8") as f:
-        text = f.read()
-    md = markdown.Markdown(extensions=["extra", "smarty", "meta"])
-    html = md.convert(text)
-    metadata = md.Meta
-    slug = metadata["slug"][0]
-    authors = metadata["authors"]
-    title = metadata["title"][0]
-    note = metadata["note"][0]
-    source = metadata["source"][0]
-    tags = metadata["tags"]
-
-    return {
-        'html': html,
-        'slug': slug,
-        'authors': authors,
-        'title': title,
-        'note': note,
-        'source': source,
-        'tags': tags
-    }
-
 
 
 context.update({
-    "info": settings.info,
-    'article_info': article_info
+    "info": settings.info
 })
 
 
 def gen_articles():
-    for file in os.listdir(os.path.join(base_path, 'templates', 'articles')):
-        article_folder = file.strip('.html')
+    directory = "./data/editions/"  
+    folders = [d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))]
+    for folder in folders:
         try:
             os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'articles'))
         except Exception as e:
             # print(e)
             pass
         try:
-            os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'articles', article_folder))
+            os.mkdir(os.path.join(settings.OUTPUT_FOLDER, 'articles', folder))
         except Exception as e:
             # print(e)
             pass
 
+        md = markdown.Markdown(extensions=["extra", "smarty", "meta"])
+        with open(f'./data/editions/{folder}/main.md') as f:
+            text = f.read()
+            html = md.convert(text)
+            article = html
+        with open(f'data/editions/{folder}/sidebar.md') as f:
+            text = f.read()
+            html = md.convert(text)
+            sidebar = html
+
         # date_list = article_folder.split('_')
-        date_edition = day_name_from_article_ref(article_folder)
-        article_data = data_infos[article_folder]['article']
-        sidebar_data = data_infos[article_folder]['sidebar']
+        date_edition = day_name_from_article_ref(folder)
         context.update({
-            'permalink': f'/articles/{article_folder}', 
+            'permalink': f'/articles/{folder}', 
             'display_home': True, 
             'date_edition': date_edition, 
             'path': '../../', 
-            'articles': [article_info(a) for a in article_data],
-            'sidebar': [article_info(a) for a in sidebar_data]
+            'article': article,
+            'sidebar': sidebar 
             })
-        generate(f'articles/{file}', 
-            join(settings.OUTPUT_FOLDER, 'articles', f'{article_folder}', 'index.html'), **context)
+        generate(f'articles/article.html', 
+            join(settings.OUTPUT_FOLDER, 'articles', f'{folder}', 'index.html'), **context)
 
 
 def gen_archives():
@@ -107,14 +102,19 @@ def gen_archives():
         # print(e)
         pass
 
-    articles = os.listdir(os.path.join(base_path, 'templates', 'articles'))
-    context.update({'archive_articles': articles})
+    directory = "./data/editions/"  
+    folders = [d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))]
+    folders = sorted(folders, key=lambda date: datetime.datetime.strptime(date, "%d_%m_%Y"), reverse=True)
+    context.update({'archive_articles': folders, 'day_name_from_article_ref':day_name_from_article_ref})
     generate(f'archives.html', 
         join(settings.OUTPUT_FOLDER, 'archives', 'index.html'), **context)
 
 
 def gen_rss():
-    articles = os.listdir(os.path.join(base_path, 'templates', 'articles'))
+    directory = "./data/editions/"  
+    folders = [d for d in os.listdir(directory) if os.path.isdir(os.path.join(directory, d))]
+    
+    articles = folders
     items = []
     for article in articles:
         article_ref = article.removesuffix('.html')
@@ -132,8 +132,7 @@ def gen_rss():
             'title': day_name_from_article_ref(article_ref),
             'description': get_description(article_ref),
             'pub_date': pub_date,
-            'author': html.escape(data_infos[article_ref]['author']),
-            'media': urllib.parse.quote_plus(data_infos[article_ref]['media']),
+            'media': 'https://picsum.photos/200/300',
             })
 
         context = {}
@@ -147,16 +146,25 @@ def gen_rss():
             join(settings.OUTPUT_FOLDER, 'rss.xml'), **context)
 
 def gen_homepage():
-    article_data = data_infos[settings.current_edition]['article']
-    sidebar_data = data_infos[settings.current_edition]['sidebar']
+    md = markdown.Markdown(extensions=["extra", "smarty", "meta"])
+    folder = settings.current_edition
+    with open(f'./data/editions/{folder}/main.md') as f:
+        text = f.read()
+        html = md.convert(text)
+        article = html
+    with open(f'data/editions/{folder}/sidebar.md') as f:
+        text = f.read()
+        html = md.convert(text)
+        sidebar = html
     context.update({
         'display_home': False, 
         'date_edition': day_name_from_article_ref(settings.current_edition),
         'permalink': f'/articles/{settings.current_edition}',
-        'articles': [article_info(a) for a in article_data],
-        'sidebar': [article_info(a) for a in sidebar_data]
+        'article': article,
+        'sidebar': sidebar
         })
-    generate(f'articles/{settings.current_edition}.html', join(
+
+    generate(f'articles/article.html', join(
         settings.OUTPUT_FOLDER, 'index.html'), **context)
 
 

@@ -1,17 +1,34 @@
-.article_cust p{
+article p{
 	padding-bottom: 10px;
 	padding-top: 10px;
 }
 
-.section_cust{
+article{
 	padding-left: 5%;
 	padding-right: 10%;
 }
 
-.sidebar_cust p{
+article h2{
+	font-size: 30px;
+	font-weight: bold;
+}
+
+/*.sidebar p{
 	padding-bottom: 10px;
 	padding-top: 10px;
 	font-size: 15px;
+}*/
+.sidebar h2{
+	font-weight: bold;
+	margin-bottom: 5px;
+}
+
+.sidebar em{
+	visibility: hidden;
+}
+
+.sidebar li::before {
+    content: "\2022\0020"; /* Unicode for a bullet (•), change to any desired symbol */
 }
 
 
