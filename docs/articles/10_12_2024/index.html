@@ -164,7 +164,7 @@ Tuesday December 10, 2024 | <a href="/archives">archives</a> | <a href="https://
 <p><a href="https://www.djangoproject.com/weblog/2024/dec/10/django-6x-steering-council-candidates/">src</a></p>
 <hr />
 <h2>EVENTS</h2>
-<p><a href="https://www.papercall.io/pycon-austria">PyCon Austria 2025</a></p>
+<p><a href="https://www.papercall.io/pycon-austria">PyCon Austria 2025 CFP</a></p>
 <p><em>.</em></p>
 <p><a href="https://pycon.blogspot.com/2024/12/pycon-us-2025-registration-launch.html">PyCon US 2025 Registration</a>. To be held in Pittsburgh, Pennsylvania.</p>
 <hr />
@@ -293,7 +293,7 @@ slow, or do not work correctly over IPv6. The situation causes flaky
 test runs on buildbots.
 &ldquo;&rdquo;&ldquo;</p>
 <hr />
-<h2>Separating F-strings from the format</h2>
+<h2>Separating F-strings From The Format</h2>
 <p><em><a href="https://mail.python.org/pipermail/python-list/2024-August/912687.html">src</a>, by DN on the Python Mailing List</em></p>
 <p>With recent improvements to the expressions within F-strings, we can 
 separate the string from the format required. (reminiscent of FORTRAN 
@@ -327,6 +327,19 @@ or (better) because right-justification is the default for numbers:
 ever do, do they?), all settings to do with s_format could be added to a 
 config/environment file, and thus be even further separated from 
 program-logic!</p>
+<hr />
+<h2>A Gem On Clear Requirements</h2>
+<p><em><a href="https://mail.python.org/pipermail/python-list/2024-June/912413.html">src</a>, by Avi gross on the Python Mailing List</em></p>
+<p>As someone who has spent lots of time writing code OR requirements of various levels or having to deal with the bugs afterwards, there can be a huge disconnect between the people trying to decide what to do and the people having to do it. It is not necessarily easy to come back later and ask for changes that wewre not anticipated in the design or implementation.</p>
+<p>I recently wrote a program where the original specifications seemed reasonable. In one part, I was asked to make a graph with some random number (or all) of the data shown as a series of connected line segments showing values for the same entity at different measurement periods and then superimpose the mean for all the original data, not just the subsample shown. This needed to be done on multiple subsamples of the original/calculated data so I made it into a function. </p>
+<p>One of the datasets contained a column that was either A or B and the function was called multiple times to show what a random sample of A+B, just A and just B graphed like along with the mean of the specific data it was drawn from. But then, I got an innocuously simple request.</p>
+<p>Could we graph A+B and overlay not only the means for A+B as was now done, but also the mean for A and the mean for B. Ideally, this would mean three bolder jaged lines superimposed above the plot and seemed simple enough.</p>
+<p>But was it? To graph the means in the first place, I made a more complex data structure needed so when graphed, it aligned well with what was below it. But that was hard coded in my function, but in one implementation, I now needed it three times. Extracting it into a new function was not trivial as it depended initially on other things within the body of the function. But, it was doable and might have been done that way had I known such a need might arise. It often is like that when there seems no need to write a function for just one use. The main function now needed to be modified to allow optionally adding one or two more datasets and if available, call the new function on each and add layers to the graph with the additional means (dashed and dotted) if they are called while otherwise, the function worked as before.</p>
+<p>But did I do it right? Well, if next time I am asked to have the data extended to have more measurements in more columns at more times, I might have to rewrite quite a bit of the code. My localized change allowed one or two additional means to be plotted. Adding an arbitrary number takes a different approach and, frankly, there are limits on how many kinds of &lsquo;line&rdquo; segments can be used to differentiate among them.</p>
+<p>Enough of the example except to make a point. In some projects, it is not enough to tell a programmer what you want NOW. You may get what you want fairly quickly but if you have ideas of possible extensions or future upgrades, it would be wiser to make clear some of the goals so the programmer creates an implementation that can be more easily adjusted to do more. Such code can take longer and be more complex so it may not pay off immediately.</p>
+<p>But, having said that, plenty of software may benefit from looking at what is happening and adjusting on the fly. Clearly my client cannot know what feedback they may get when showing an actual result to others who then suggest changes or enhancements. The results may not be anticipated so well in advance and especially not when the client has no idea what is doable and so on. </p>
+<p>A related example was a request for how to modify a sort of Venn Diagram  chart to change the font size. Why? Because some of the labels were long and the relative sizes of the pie slices were not known till an analysis of the data produced the appropriate numbers and ratios. This was a case where the documentation of the function used by them did not suggest how to do many things as it called a function that called others to quite some depth. A few simple experiments and some guesses and exploration showed me ways to pass arguments along that were not documented but that were passed properly down the chain and I could now change the text size and quite a few other things. But I asked myself if this was really the right solution the client needed. I then made a guess on how I could get the long text wrapped into multiple lines that fit into the sections of the Venn Diagram without shrinking the text at all, or as much. The client had not considered that as an option, but it was better for their display than required. But until people see such output, unless they have lots of experience, it cannot be expected they can tell you up-front what they want.</p>
+<p>One danger of languages like Python is that often people get the code you supply and modify it themselves or reuse it on some project they consider similar. That can be a good thing but often a mess as you wrote the code to do things in a specific way for a specific purpose &hellip;</p>
       </article>
   
 
