@@ -29,7 +29,7 @@ Gregory Smith reflected that after years of experience with huge C++ codebases, 
 
 _[src](https://twitter.com/AdamChainz/status/1488622545289060357?s=20&t=LhdIkz7aKdMcV9BTovEwfA), By Adam Johnson_
 
-1 🔒 The {% debug %} tag was found to be an XSS vector, since it didn't escape variables. I don't recall seeing anyone use the tag, so you're probably safe... But it still could easily be in a template somewhere!
+1 🔒 The `{% debug %}` tag was found to be an XSS vector, since it didn't escape variables. I don't recall seeing anyone use the tag, so you're probably safe... But it still could easily be in a template somewhere!
 
 Thanks to @kezabelle, @m_holtermann and @MariuszFelisiak
 
@@ -226,9 +226,6 @@ seperation between the limited C API and the default C API, etc. ;-)
 ---
 
 ## What's Happening in PythonLand
-
-_[src](---), _
-
 
 PEP 668 -Graceful cooperation between external and Python package managers is [being proposed](https://discuss.python.org/t/graceful-cooperation-between-external-and-python-package-managers-pep-668/10302) but at the same time it [is suggested](https://discuss.python.org/t/renaming-pep-668/13474) that the name be changed for being too vague.
 

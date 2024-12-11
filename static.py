@@ -28,13 +28,13 @@ def get_description(article_ref):
         markdown = f.read().split('\n')
         for line in markdown:
             if line.strip().startswith('##'):
-                title = line.strip().split()[1]
+                title = ' '.join(line.strip().split()[1:])
                 titles.append(title)
     with open(f'data/editions/{article_ref}/sidebar.md') as f:
         markdown = f.read().split('\n')
         for line in markdown:
             if line.strip().startswith('##'):
-                title = line.strip().split()[1]
+                title = ' '.join(line.strip().split()[1:])
                 titles.append(title)
 
     return 'Main titles for this edition: '+ ', '.join(titles)

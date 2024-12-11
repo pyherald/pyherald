@@ -4,14 +4,14 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Wed, 11 Dec 2024 18:53:55 -0000</lastBuildDate>
+	<lastBuildDate>Wed, 11 Dec 2024 19:44:30 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
 	<item>
 		<title>Thursday January 20, 2022</title>
 		<link>https://pyherald.com/articles/20_01_2022</link>
-		<description><![CDATA[Main titles for this edition: Asserts, When, Type, What's, -------, -------, ---, -------, ---, -------]]></description>
+		<description><![CDATA[Main titles for this edition: Asserts Beyond Tests: Good or Evil?, When Dependencies Bite!, Type Checking: What To Read To Stay Updated?, What's Happening in PythonLand?, The Elasticsearch Python client source code is 95% generated, Python Cardioception Package, Adam Johnson: On Receiving the Malcolm Tredinnick Award, Python implementation of the Lox language, Mask-Free Local Image Manipulation, Flight Fare Prediction]]></description>
 		<guid>https://pyherald.com/articles/20_01_2022</guid>
 		<pubDate>Wed, 19 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -21,7 +21,7 @@
 	<item>
 		<title>Friday January 28, 2022</title>
 		<link>https://pyherald.com/articles/28_01_2022</link>
-		<description><![CDATA[Main titles for this edition: CPython's, The, Don't, What's, -------, -------, -------, -------, -------, -------, -------, -------]]></description>
+		<description><![CDATA[Main titles for this edition: CPython's main branch now compiles to webassembly!, The Perfect Example To Understand AsyncIO, Don't Shut Up Warnings You Don't Care About, What's happening in PythonLand?, Build a screen recorder in Python!, A Gentle Introduction to Deep Neural Networks with Python, PSF wins presigious animation award, IDLE, A Bit of History, The f-word as Open Source Pandas thanks!, Conspiracy: Beazly and Luciano Ramalho are one and same person., Built-in Python command on Windows now directs to 3.10]]></description>
 		<guid>https://pyherald.com/articles/28_01_2022</guid>
 		<pubDate>Thu, 27 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -31,7 +31,7 @@
 	<item>
 		<title>Tuesday December 10, 2024</title>
 		<link>https://pyherald.com/articles/10_12_2024</link>
-		<description><![CDATA[Main titles for this edition: On, A, Separating, A, The, Sebastian, Astral, JetBrains,, Python, 2024, Django, EVENTS, JOBS]]></description>
+		<description><![CDATA[Main titles for this edition: On Poor Error Reporting, A Good Reminder of Why Dead Batteries Are Being Removed: The Case of nntplib, Separating F-strings From The Format, A Gem On Clear Requirements, The 2025 Term Python Steering Council results, Sebastian Ramirez, author of FastAPI is now a Github Star, Astral takes stewardship of Python-build-standalone, JetBrains, Meta, and Microsoft collaborated to conduct a comprehensive survey on the state of Python typing: The findings, Python allowed to make network requests in ChatGPT: The Boons and Perils, 2024 Python in VS Code Wrapped, Django Steering Council candidates, EVENTS, JOBS]]></description>
 		<guid>https://pyherald.com/articles/10_12_2024</guid>
 		<pubDate>Mon, 09 Dec 2024 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -41,7 +41,7 @@
 	<item>
 		<title>Wednesday January 12, 2022</title>
 		<link>https://pyherald.com/articles/12_01_2022</link>
-		<description><![CDATA[Main titles for this edition: HTMX:, Normalisation, Solving, What's, Pattern, Taichi, MMOCR:, Leveraging, CS50's, A, Six, Packaging]]></description>
+		<description><![CDATA[Main titles for this edition: HTMX: How Python Fueled the Rise of a JS Lib, Normalisation In Distribution Filenames: Yet Another Packaging Vagary, Solving Local File Overshadowing Library Name, What's Happening in PythonLand?, Pattern Matching Cheatsheet, Taichi For Maths Algo Visualisation, MMOCR: A Cool, PyTorch-Based OCR Framework, Leveraging Python Packaging To Get AWS Serverless Right, CS50's Introduction to Artificial Intelligence with Python, A Collection of Blender Tools Written Over The Years, Six Levels of Python Decorators, Packaging Project Manager Monthly Update for December 21]]></description>
 		<guid>https://pyherald.com/articles/12_01_2022</guid>
 		<pubDate>Tue, 11 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -51,7 +51,7 @@
 	<item>
 		<title>Friday December 24, 2021</title>
 		<link>https://pyherald.com/articles/24_12_2021</link>
-		<description><![CDATA[Main titles for this edition: So,, Fredrik, Instagram:, Preventing, Why, Best, HTMX, Discord.py's, PEP, Why]]></description>
+		<description><![CDATA[Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions, Best libs 21, HTMX + Flask: Modern Python Web Apps, Discord.py's maintained fork is out, PEP 671 -- Syntax for late-bound function argument defaults, Why Python Packaging choose TOML]]></description>
 		<guid>https://pyherald.com/articles/24_12_2021</guid>
 		<pubDate>Thu, 23 Dec 2021 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -61,7 +61,7 @@
 	<item>
 		<title>Sunday January 2, 2022</title>
 		<link>https://pyherald.com/articles/02_01_2022</link>
-		<description><![CDATA[Main titles for this edition: Why, Representing, Frozenset, The, Book, Learn, WASM, SEA:, You, Steering, Georgi]]></description>
+		<description><![CDATA[Main titles for this edition: Why Python Matters for the VR Community, Representing Numbers: The Complexity Behind, Frozenset Can Be Altered by |=, The List of Active Core Devs, Book a session to talk about tech with the author of the rich library!, Learn Python ASTs, by building your own linter, WASM support in CPython increases by leaps and bounds., SEA: Static bytecode simulator by core dev Taskaya, You can now tell compelling data stories with Power BI in Jupyter notebooks! (With Python), Steering Council Members, Georgi Ker Awarded the PSF Community Service Award for Q4 2020]]></description>
 		<guid>https://pyherald.com/articles/02_01_2022</guid>
 		<pubDate>Sat, 01 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
@@ -71,7 +71,7 @@
 	<item>
 		<title>Friday February 4, 2022</title>
 		<link>https://pyherald.com/articles/04_02_2022</link>
-		<description><![CDATA[Main titles for this edition: Why, What's, David, PyPy, C, What's, Black, Geospatial, Quarto:, 7, Debian, Meta, Rich-cli:, How, Rich]]></description>
+		<description><![CDATA[Main titles for this edition: Why No C++ For The CPython Codebase, What's New In Django Security Releases, David Beazley: When I Was A Nobody, PyPy on PySide6 is there: PyPy with a Gui, C API: The ABI Masterplan, What's Happening in PythonLand, Black no longer in beta!, Geospatial deep learning with arcgis.learn (paid, fee limits), Quarto: Open-source scientific and technical publishing system built on Pandoc, 7 Steps to Mastering Machine Learning with Python in 2022, Debian binaries in the browser, Meta Introduces A Self-Supervised Algorithm That Works For Speech, Computer Vision, and NLP, Rich-cli: Visualise files with rich and more!, How Python handles unicode, Rich now in PIP!]]></description>
 		<guid>https://pyherald.com/articles/04_02_2022</guid>
 		<pubDate>Thu, 03 Feb 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
