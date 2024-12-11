@@ -188,7 +188,7 @@ Friday February 4, 2022 | <a href="/archives">archives</a> | <a href="https://fo
 <hr />
 <h2>What&rsquo;s New In Django Security Releases</h2>
 <p><em><a href="https://twitter.com/AdamChainz/status/1488622545289060357?s=20&amp;t=LhdIkz7aKdMcV9BTovEwfA">src</a>, By Adam Johnson</em></p>
-<p>1 🔒 The {% debug %} tag was found to be an XSS vector, since it didn&rsquo;t escape variables. I don&rsquo;t recall seeing anyone use the tag, so you&rsquo;re probably safe&hellip; But it still could easily be in a template somewhere!</p>
+<p>1 🔒 The <code>{% debug %}</code> tag was found to be an XSS vector, since it didn&rsquo;t escape variables. I don&rsquo;t recall seeing anyone use the tag, so you&rsquo;re probably safe&hellip; But it still could easily be in a template somewhere!</p>
 <p>Thanks to @kezabelle, @m_holtermann and @MariuszFelisiak</p>
 <p>2 🔒 Files uploaded using &lsquo;Content-Transfer-Encoding: baes64&rsquo; but not enough data could cause an infinite loop. This is a bad DoS vector!</p>
 <p>Thanks to Alan Ryan and @MariuszFelisiak</p>
@@ -315,7 +315,6 @@ seperation between the limited C API and the default C API, etc. ;-)</p>
 <p>&ndash; Victor</p>
 <hr />
 <h2>What&rsquo;s Happening in PythonLand</h2>
-<p>_<a href="---">src</a>, _</p>
 <p>PEP 668 -Graceful cooperation between external and Python package managers is <a href="https://discuss.python.org/t/graceful-cooperation-between-external-and-python-package-managers-pep-668/10302">being proposed</a> but at the same time it <a href="https://discuss.python.org/t/renaming-pep-668/13474">is suggested</a> that the name be changed for being too vague.</p>
 <p>Tomáš Hrnčiar, Red Hat engineer submits <a href="https://discuss.python.org/t/experience-with-python-3-11-in-fedora/12911">his report</a> of Python 3.11 on Fedora</p>
 <p>The community <a href="https://discuss.python.org/t/community-testing-of-packaging-tools-against-non-warehouse-indexes/13442">needs help</a> testing packages against indexes other than the warehouse. A weird and virtually unknown <a href="https://www.python.org/dev/peps/pep-0503/">PEP 503</a> was not being followed and disaster ensured.</p>
