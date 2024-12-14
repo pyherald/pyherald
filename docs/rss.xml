@@ -4,7 +4,7 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Thu, 12 Dec 2024 10:33:16 -0000</lastBuildDate>
+	<lastBuildDate>Sat, 14 Dec 2024 12:25:36 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -74,6 +74,16 @@
 		<description><![CDATA[Main titles for this edition: Why No C++ For The CPython Codebase, What's New In Django Security Releases, David Beazley: When I Was A Nobody, PyPy on PySide6 is there: PyPy with a Gui, C API: The ABI Masterplan, What's Happening in PythonLand, Black no longer in beta!, Geospatial deep learning with arcgis.learn (paid, fee limits), Quarto: Open-source scientific and technical publishing system built on Pandoc, 7 Steps to Mastering Machine Learning with Python in 2022, Debian binaries in the browser, Meta Introduces A Self-Supervised Algorithm That Works For Speech, Computer Vision, and NLP, Rich-cli: Visualise files with rich and more!, How Python handles unicode, Rich now in PIP!]]></description>
 		<guid>https://pyherald.com/articles/04_02_2022</guid>
 		<pubDate>Thu, 03 Feb 2022 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Monday December 16, 2024</title>
+		<link>https://pyherald.com/articles/16_12_2024</link>
+		<description><![CDATA[Main titles for this edition: Conda's Package Management Pandemonium, Problems With Python's Package Management And Venv Philosophy, Markdown & Madness]]></description>
+		<guid>https://pyherald.com/articles/16_12_2024</guid>
+		<pubDate>Sun, 15 Dec 2024 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
 		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
