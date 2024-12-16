@@ -36,6 +36,12 @@ _[src](https://www.csoonline.com/article/3619159/supply-chain-compromise-of-ultr
 
 ---
 
+## PSF End-of-year Fundraiser and Membership Drive
+
+_[src](https://www.python.org/psf/donations/2024-q4-drive/), To build the future of Python and sustain the thriving community that its users deserve, we need your help. By backing the PSF, you’re investing in Python’s growth and health, and your contributions directly impact the language's future._
+
+---
+
 ## JOBS
 
 - Remote: Senior Ai Engineer @ Awin [view](https://remoteok.com/remote-jobs/remote-senior-ai-engineer-awin-1059467)
