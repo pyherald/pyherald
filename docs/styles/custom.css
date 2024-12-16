@@ -11,6 +11,7 @@ article{
 article h2{
 	font-size: 30px;
 	font-weight: bold;
+	margin-top: 30px;
 }
 
 /*.sidebar p{
@@ -23,9 +24,7 @@ article h2{
 	margin-bottom: 5px;
 }
 
-.sidebar em{
-	visibility: hidden;
-}
+
 
 .sidebar li::before {
     content: "\2022\0020"; /* Unicode for a bullet (•), change to any desired symbol */
@@ -42,6 +41,8 @@ blockquote{
 	background-color: #f6f8fa !important;
 	padding:  10px !important;
 	border-left:  5px solid darkgray !important;
+	margin-top: 20px;
+	margin-bottom: 20px;
 }
 
 

@@ -151,7 +151,30 @@ RSS
 <hr>
 
     <div class="sidebar">
-      
+      <h2>Microsoft releases Markitdown</h2>
+<p><em><a href="https://github.com/microsoft/Markitdown">src</a>, Python tool for converting files and office documents to Markdown.</em></p>
+<hr />
+<h2>PDFMathTranslate</h2>
+<p><em><a href="https://github.com/Byaidu/PDFMathTranslate">src</a>, scientific paper translation with preserved format.</em></p>
+<hr />
+<h2>docling</h2>
+<p><em><a href="https://github.com/Byaidu/PDFMathTranslate">src</a>, Get your documents ready for gen AI.</em></p>
+<hr />
+<h2>PEP 768 – Safe external debugger interface for CPython</h2>
+<p><em><a href="https://peps.python.org/pep-0768/">src</a>, This PEP proposes adding a zero-overhead debugging interface to CPython that allows debuggers and profilers to safely attach to running Python processes. The interface provides safe execution points for attaching debugger code without modifying the interpreter’s normal execution path or adding runtime overhead.</em></p>
+<p><br></p>
+<p><em>A key application of this interface will be enabling pdb to attach to live processes by process ID, similar to gdb -p, allowing developers to inspect and debug Python applications interactively in real-time without stopping or restarting them.</em></p>
+<hr />
+<h2>Vote to promote Bénédikt Tran (picnixz)</h2>
+<p><em><a href="https://discuss.python.org/t/vote-to-promote-benedikt-tran-picnixz/74169">src</a>, Ongoing core developer vote.</em></p>
+<hr />
+<p><em><a href="https://www.csoonline.com/article/3619159/supply-chain-compromise-of-ultralytics-ai-library-results-in-trojanized-versions.html">src</a>, Ultralytics AI library was compromised</em></p>
+<hr />
+<h2>JOBS</h2>
+<ul>
+<li>Remote: Senior Ai Engineer @ Awin <a href="https://remoteok.com/remote-jobs/remote-senior-ai-engineer-awin-1059467">view</a></li>
+<li>Remote: Senior Engineer Payments @ Sure <a href="https://remoteok.com/remote-jobs/remote-senior-engineer-payments-sure-1058064">view</a></li>
+</ul>
     </div>
       
 
@@ -164,7 +187,7 @@ RSS
     <div class="tile is-child box p-6" style="overflow-wrap: break-word;   word-break: break-all;text-align: justify;
   text-justify: inter-word;">
       <article>
-        <h2>Conda&rsquo;s Package Management Pandemonium</h2>
+        <h2>Conda: A Package Management Disaster?</h2>
 <p><em><a href="https://mail.python.org/pipermail/python-list/2024-May/912306.html">src</a>, by Left Right on the Python Mailing List</em></p>
 <p>The &ldquo;problematic&rdquo; part of your question is &ldquo;with my Anaconda
 distribution&rdquo;. Anaconda distribution comes with the conda program that
@@ -190,14 +213,14 @@ create ambiguities as to the resolution of the package location.</p>
 be set to add an arbitrary number of source directories for Python to
 look up package location.</p>
 <p>So, suppose you ran:</p>
-<p>python -c &ldquo;import numpy; numpy.<strong>version</strong>&ldquo;</p>
+<p><code>python -c "import numpy; numpy.__version__"</code></p>
 <p>and then ran a Jupyter notebook and discovered that the version of
 NumPy in that notebook is not the one you just saw in the previous
 output&hellip; What went wrong?</p>
 <p>You then may try:</p>
-<p>conda info numpy</p>
+<p><code>conda info numpy</code></p>
 <p>and get yet another answer.  And then you run</p>
-<p>pip show numpy</p>
+<p><code>pip show numpy</code></p>
 <p>And the answer is still different!</p>
 <p>Of course, it&rsquo;s not necessary that all these answers are different.
 And, in most circumstances they are going to be consistent&hellip; but they

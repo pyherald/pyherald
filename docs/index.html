@@ -25,7 +25,7 @@
 <section class="section">
   <hr>
 
-Tuesday December 10, 2024 | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="/articles/10_12_2024">permalink</a>
+Monday December 16, 2024 | <a href="/archives">archives</a> | <a href="https://forms.gle/ijEnYXooH8mgj48J7">submit</a> | <a href="/articles/16_12_2024">permalink</a>
 
 <hr>
 
@@ -151,41 +151,29 @@ RSS
 <hr>
 
     <div class="sidebar">
-      <h2>The 2025 Term Python Steering Council results</h2>
-<ul>
-<li>Barry Warsaw</li>
-<li>Donghee Na</li>
-<li>Emily Morehouse</li>
-<li>Gregory P. Smith</li>
-<li>Pablo Galindo Salgado</li>
-</ul>
+      <h2>Microsoft releases Markitdown</h2>
+<p><em><a href="https://github.com/microsoft/Markitdown">src</a>, Python tool for converting files and office documents to Markdown.</em></p>
 <hr />
-<h2>Sebastian Ramirez, author of FastAPI is now a Github Star</h2>
-<p><a href="https://stars.github.com/profiles/tiangolo/">src</a></p>
+<h2>PDFMathTranslate</h2>
+<p><em><a href="https://github.com/Byaidu/PDFMathTranslate">src</a>, scientific paper translation with preserved format.</em></p>
 <hr />
-<h2>Astral takes stewardship of Python-build-standalone</h2>
-<p><a href="https://astral.sh/blog/python-build-standalone">src</a></p>
+<h2>docling</h2>
+<p><em><a href="https://github.com/Byaidu/PDFMathTranslate">src</a>, Get your documents ready for gen AI.</em></p>
 <hr />
-<h2>JetBrains, Meta, and Microsoft collaborated to conduct a comprehensive survey on the state of Python typing: The findings</h2>
-<p><a href="https://engineering.fb.com/2024/12/09/developer-tools/typed-python-2024-survey-meta/">src</a></p>
+<h2>PEP 768 – Safe external debugger interface for CPython</h2>
+<p><em><a href="https://peps.python.org/pep-0768/">src</a>, This PEP proposes adding a zero-overhead debugging interface to CPython that allows debuggers and profilers to safely attach to running Python processes. The interface provides safe execution points for attaching debugger code without modifying the interpreter’s normal execution path or adding runtime overhead.</em></p>
+<p><br></p>
+<p><em>A key application of this interface will be enabling pdb to attach to live processes by process ID, similar to gdb -p, allowing developers to inspect and debug Python applications interactively in real-time without stopping or restarting them.</em></p>
 <hr />
-<h2>Python allowed to make network requests in ChatGPT: The Boons and Perils</h2>
-<p><a href="https://simonwillison.net/2024/Dec/10/chatgpt-canvas/">src</a></p>
+<h2>Vote to promote Bénédikt Tran (picnixz)</h2>
+<p><em><a href="https://discuss.python.org/t/vote-to-promote-benedikt-tran-picnixz/74169">src</a>, Ongoing core developer vote.</em></p>
 <hr />
-<h2>2024 Python in VS Code Wrapped</h2>
-<p><a href="https://devblogs.microsoft.com/python/2024-python-vscode-wrapped/">src</a></p>
-<hr />
-<h2>Django Steering Council candidates</h2>
-<p><a href="https://www.djangoproject.com/weblog/2024/dec/10/django-6x-steering-council-candidates/">src</a></p>
-<hr />
-<h2>EVENTS</h2>
-<p><a href="https://www.papercall.io/pycon-austria">PyCon Austria 2025 CFP</a></p>
-<p><em>.</em></p>
-<p><a href="https://pycon.blogspot.com/2024/12/pycon-us-2025-registration-launch.html">PyCon US 2025 Registration</a>. To be held in Pittsburgh, Pennsylvania.</p>
+<p><em><a href="https://www.csoonline.com/article/3619159/supply-chain-compromise-of-ultralytics-ai-library-results-in-trojanized-versions.html">src</a>, Ultralytics AI library was compromised</em></p>
 <hr />
 <h2>JOBS</h2>
 <ul>
-<li><a href="https://remoteok.com/remote-jobs/remote-senior-back-end-wizard-joi-studio-867839">Remote Senior Back End Wizard</a></li>
+<li>Remote: Senior Ai Engineer @ Awin <a href="https://remoteok.com/remote-jobs/remote-senior-ai-engineer-awin-1059467">view</a></li>
+<li>Remote: Senior Engineer Payments @ Sure <a href="https://remoteok.com/remote-jobs/remote-senior-engineer-payments-sure-1058064">view</a></li>
 </ul>
     </div>
       
@@ -199,162 +187,249 @@ RSS
     <div class="tile is-child box p-6" style="overflow-wrap: break-word;   word-break: break-all;text-align: justify;
   text-justify: inter-word;">
       <article>
-        <h2>On Poor Error Reporting</h2>
-<p><em><a href="https://mail.python.org/pipermail/python-list/2024-November/912987.html">src</a>, by Left Right the Python Mailing List</em></p>
-<p>Poor error reporting is a very common problem in programming.  Python
-is not anything special in this case.  Of course, it would&rsquo;ve been
-better if the error reported what file wasn&rsquo;t found.  But, usually
-these problems are stacking, like in your code.  Unfortunately, it&rsquo;s
-your duty, as the language user, to anticipate those problems and act
-accordingly. Now you&rsquo;ve learned that the one file you believe that
-could be the source for the error isn&rsquo;t the only one&ndash;well, adjust
-your code to differentiate between those two (and potentially other?)
-cases.  There&rsquo;s very little else you can do beside that.</p>
-<p>NB. On the system level, the error has no information about what file
-wasn&rsquo;t found.  It simply returns some numeric value (the famous
-ENOENT) in case when the system call to open a file fails.  Python
-could&rsquo;ve been more helpful by figuring out what path caused the
-problem and printing that in the error message, but it doesn&rsquo;t&hellip;
-That&rsquo;s why I, myself, never use the vanilla FileNotFoundError, I
-always re-rise it with a customized version that incorporates the
-information about the missing file in the error message.</p>
-<p>NB2. It&rsquo;s always a bad idea to print logs to files.  Any sysadmin /
-ops / infra person worth their salt will tell you that.  The only
-place the logs should go to is the standard error.  There are true and
-tried tools that can pick up logs from that point on, and do with them
-whatever your heart desires.  That is, of course, unless you are
-creating system tools for universal log management (in which case, I&rsquo;d
-question the choice of Python as a suitable language for such a task).
-Unfortunately, even though this has been common knowledge for decades,
-it&rsquo;s still elusive in the world of application development :|</p>
-<p>First, the problem with writing to files is that there is no way to
-make these logs reliable.  This is what I mean by saying these are
-unreliable: since logs are designed to grow indefinitely, the natural
-response to this design property is log rotation.  But, it&rsquo;s
-impossible to reliably rotate a log file.  There&rsquo;s always a chance
-that during the rotation some log entries will be written to the file
-past the point of rotation, but prior to the point where the next logs
-volume starts.</p>
-<p>There are similar reliability problems with writing to Unix or
-Internet sockets, databases etc.  For different reasons, but at the
-end of the day, whoever wants logs, they want them to be reliable.
-Both simplicity and convention selected for stderr as the only and the
-best source of logging output.</p>
-<p>Programs that write their output to log files will always irritate
-their users because users will have to do some detective work to
-figure out where those files are, and in some cases they will have to
-do administrative works to make sure that the location where the
-program wants to store the log files is accessible, has enough free
-space, is speedy enough etc.  So, from the ops perspective, whenever I
-come across a program that tries to write logs to anything other than
-stderr, I make an earnest effort to throw that program into the gutter
-and never touch it again.  It&rsquo;s too much headache to babysit every
-such program, to remember the location of the log files of every such
-program, the required permissions, to provision storage.  If you are
-in that line of work, you just want all logs to go to the same place
-(journal), where you can later filter / aggregate / correlate and
-perform other BI tasks as your heart desires.</p>
-<p>Of course, if you only administer your own computer, and you have low
-single digits programs to run, and their behavior doesn&rsquo;t change
-frequently, and you don&rsquo;t care to drop some records every now and
-then&hellip; it&rsquo;s OK to log to files directly from a program.  But then you
-aren&rsquo;t really in the sysadmin / infra / ops category, as you are more
-of a hobby enthusiast.</p>
-<p>Finally, if you want your logs to go to a file, and currently, your
-only option is stderr, your shell gives you a really, really simple
-way of redirecting stderr to a file.  So, really, there aren&rsquo;t any
-excuses to do that.</p>
-<hr />
-<h2>A Good Reminder of Why Dead Batteries Are Being Removed: The Case of nntplib</h2>
-<p><em><a href="https://mail.python.org/pipermail/python-list/2024-August/912636.html">src</a>, by Keith Thompson on the Python Mailing List</em></p>
-<p>nntplib is not vanishing into thin air.  It&rsquo;s just not going to be part
-of a default Python installation.  (It&rsquo;s not there in Python 3.13.0rc1.)</p>
-<p>In my opinion the use of the word &ldquo;deprecated&rdquo; is misleading.</p>
-<pre><code>$ python3
-Python 3.12.4 (main, Jun 27 2024, 13:53:59) [GCC 13.3.0] on linux
-Type &quot;help&quot;, &quot;copyright&quot;, &quot;credits&quot; or &quot;license&quot; for more information.
-&gt;&gt;&gt; import nntplib
-&lt;stdin&gt;:1: DeprecationWarning: 'nntplib' is deprecated and slated for removal in Python 3.13
-&gt;&gt;&gt;
-$ 
-</code></pre>
-<p><a href="https://pypi.org/project/nntplib/">https://pypi.org/project/nntplib/</a></p>
-<p>The rationale for removing nntplib and other modules from the default
-installation is explained in <a href="https://peps.python.org/pep-0594/">PEP 0594</a>.</p>
-<p>&rdquo;&ldquo;&rdquo;
-Back in the early days of Python, the interpreter came with a large
-set of useful modules. This was often referred to as “batteries
-included” philosophy and was one of the cornerstones to Python’s success
-story. Users didn’t have to figure out how to download and install
-separate packages in order to write a simple web server or parse email.</p>
-<p>Times have changed. With the introduction of PyPI (née Cheeseshop),
-setuptools, and later pip, it became simple and straightforward to
-download and install packages. Nowadays Python has a rich and vibrant
-ecosystem of third-party packages. It’s pretty much standard to either
-install packages from PyPI or use one of the many Python or Linux
-distributions.</p>
-<p>[&hellip;]</p>
-<p>The nntplib module implements the client side of the Network News
-Transfer Protocol (nntp). News groups used to be a dominant platform for
-online discussions. Over the last two decades, news has been slowly but
-steadily replaced with mailing lists and web-based discussion
-platforms. Twisted is also planning to deprecate NNTP support and pynntp
-hasn’t seen any activity since 2014. This is a good indicator that the
-public interest in NNTP support is declining.</p>
-<p>The nntplib tests have been the cause of additional work in the recent
-past. Python only contains the client side of NNTP, so the tests connect
-to external news servers. The servers are sometimes unavailable, too
-slow, or do not work correctly over IPv6. The situation causes flaky
-test runs on buildbots.
-&ldquo;&rdquo;&ldquo;</p>
-<hr />
-<h2>Separating F-strings From The Format</h2>
-<p><em><a href="https://mail.python.org/pipermail/python-list/2024-August/912687.html">src</a>, by DN on the Python Mailing List</em></p>
-<p>With recent improvements to the expressions within F-strings, we can 
-separate the string from the format required. (reminiscent of FORTRAN 
-which had both WRITE and FORMAT statements, or for that matter HTML 
-which states the &lsquo;what&rsquo; and CSS the &lsquo;how&rsquo;)</p>
-<p>Given that the int() instance-creation has a higher likelihood of 
-data-error, it is recommended that it be a separate operation for ease 
-of fault-finding - indeed some will want to wrap it with try&hellip;except.</p>
-<pre><code> &gt;&gt;&gt; s = &quot;123456789&quot; # arrives as str
- &gt;&gt;&gt; s_int = int( s )  # makes the transformation obvious and distinct
+        <h2>Conda: A Package Management Disaster?</h2>
+<p><em><a href="https://mail.python.org/pipermail/python-list/2024-May/912306.html">src</a>, by Left Right on the Python Mailing List</em></p>
+<p>The &ldquo;problematic&rdquo; part of your question is &ldquo;with my Anaconda
+distribution&rdquo;. Anaconda distribution comes with the conda program that
+manages installed packages. A single Anaconda distribution may have
+multiple NumPy versions installed at the same time, although only one
+will be available to the Python process (note that this means that
+sub-processes created in this Python process won&rsquo;t necessarily have
+the same version of NumPy!). To make matters worse, it&rsquo;s common for
+Anaconda users to use pip to install packages.</p>
+<p>Now, Anaconda has a concept of virtual environments independent of
+Python&rsquo;s venv module. In order to create such environments it can be
+configured to either link (usually hard-link) installed packages into
+the dedicated directory, or to copy these packages into the said
+directory. This will become important once you inevitably ask the
+follow-up question: &ldquo;why do I have this version of NumPy?&rdquo;.</p>
+<p>Unfortunately, you also need to consider setuptools. The traditional
+setup.py install command may install multiple versions of the same
+package into the same directory. Even worse, &ldquo;pip install -e&rdquo;, the
+glorified &ldquo;setup.py develop&rdquo;, complicates things even further by
+adding the &ldquo;installed&rdquo; package to the pth file, which can, again,
+create ambiguities as to the resolution of the package location.</p>
+<p>On top of this, there&rsquo;s an environment variable: PYTHONPATH that can
+be set to add an arbitrary number of source directories for Python to
+look up package location.</p>
+<p>So, suppose you ran:</p>
+<p><code>python -c "import numpy; numpy.__version__"</code></p>
+<p>and then ran a Jupyter notebook and discovered that the version of
+NumPy in that notebook is not the one you just saw in the previous
+output&hellip; What went wrong?</p>
+<p>You then may try:</p>
+<p><code>conda info numpy</code></p>
+<p>and get yet another answer.  And then you run</p>
+<p><code>pip show numpy</code></p>
+<p>And the answer is still different!</p>
+<p>Of course, it&rsquo;s not necessary that all these answers are different.
+And, in most circumstances they are going to be consistent&hellip; but they
+don&rsquo;t have to be!</p>
+<p>Below is the list of typical problems I encountered in my attempts to
+resolve similar problems for Python users. Of course, this list is not
+exhaustive.</p>
+<ol>
+<li>
+<p>If the version in the Jupyter notebook differs from the one in the
+environment in which the Jupyter server was started, you need to look
+for the Jupyter kernel definition. There are many ways in which the
+Jupyter kernel definition may alter the module lookup locations, but
+the most common one is that using Python from the active virtual
+environment isn&rsquo;t the default for the default Jupyter kernel.</p>
+</li>
+<li>
+<p>If installed modules in conda environments are hard-linked, and at
+some point pip or setuptools were used to install extra packages, you
+might have &ldquo;botched&rdquo; unrelated environments by overwriting files
+through hard-links without you even knowing that.</p>
+</li>
+<li>
+<p>conda will happily install outdated versions of conda into virtual
+environments it creates. The format of conda virtual environments
+changed over time, and older versions of conda are unaware of the new
+format, while newer versions are unaware of the old format. If you
+happen to run the conda command from the wrong environment you may get
+unexpected results (especially if both the new and the old version of
+conda have created environments with the same name!) To avoid this,
+you&rsquo;d want to deactivate all conda environments activated so far until
+you are at least in the base environment.</p>
+</li>
+<li>
+<p>Usually, some diagnostic information can be gleaned from printing
+the value of PYTHONPATH environment variable, sys.paths list (inside
+Python), sys.sysconfig.get_path(&lsquo;platlib&rsquo;) (and looking into this
+directory for duplicate packages with different version or for the pth
+files.) If you discover anomalies, try to figure out if you had to use
+pip to install packages (this may indirectly mean using setuptools).
+Similarly, running &ldquo;conda build&rdquo; may indirectly result in running
+setuptools commands. Also, some popular tools like to do bad things to
+packages and virtual environments: pytest and tox come to mind. pytest
+can manipulate module lookup locations (and you will need to dissect
+its configuration to figure this out). tox, afaik, is unaware of conda
+virtual environments, and will try to create venv-style virtual
+environments, which will have all the same problems as using pip in
+conda environments does.</p>
+</li>
+<li>
+<p>Final warning: no matter how ridiculous this is: the current
+directory in Python is added to the module lookup path, and it
+<em>precedes</em> every other lookup location. If, accidentally, you placed a
+numpy.py in the current directory of your Python process &ndash; that is
+going to be the numpy module you import.  To make this even worse,
+this behavior used to depend on whether you start Python with PDB
+active or not (with PDB, the current working directory wasn&rsquo;t added to
+the path, and module imports resolved differently). I&rsquo;m not quite sure
+which version of Python fixed that.</p>
+</li>
+</ol>
+<h2>Problems With Python&rsquo;s Package Management And Venv Philosophy</h2>
+<p><em><a href="https://mail.python.org/pipermail/python-list/2024-May/912341.html">src</a>, by Left Right on the Python Mailing List</em></p>
+<p>There are several independent problems here:</p>
+<p>(1) Very short release cycle. This is independent of the Python venv
+module but is indirectly influenced by Python&rsquo;s own release cycle.
+Package maintainers don&rsquo;t have time for proper testing, they are
+encouraged to release a bunch of new (and poorly tested) versions, and
+they never get a break. So, when you install the latest, there will be
+something else broken.  There&rsquo;s never a window to properly test
+anything.</p>
+<p>(2) Python made a very short-sighted decision about how imports work.
+Python doesn&rsquo;t have a concept of &ldquo;application&rdquo;, and therefore there&rsquo;s
+no way to specify dependencies per application (and imports import
+anything that&rsquo;s available, not versioned). That&rsquo;s why every Python
+application ends up carrying its own Python, with the version of its
+own dependencies around. Python&rsquo;s venv module is just an
+acknowledgement of this design flaw.  I.e. the proper solution
+would&rsquo;ve been a concept of application and per-application dependency
+specification, but instead we got this thing that doesn&rsquo;t really work
+(esp. when native modules and shared libraries are considered), but it
+&ldquo;works&rdquo; often enough to be useful.</p>
+<p>(3) The Python community grew to be very similar to what PHP 4 was,
+where there were several &ldquo;poisonous&rdquo; examples, which were very popular
+on the Web, which popularized a way of working with MySQL databases
+that was very conducive to SQL injections. Python has spread very bad
+ideas about project management. Similar to how PHP came up with
+mysql_real_escape() and mysql_this_time_promise_for_real_escape() and
+so on functions, Python came up with bad solutions to the problems
+that had to be fixed by removing bad functionality (or, perhaps,
+education). So, for example, it&rsquo;s very common to use requirements.txt,
+which is generated by running pip freeze (both practices are bad
+ideas). Then PyPA came up with a bunch of bad ideas in response to
+problems like this, eg. pyproject.toml.  In an absurd way very much
+mirroring the situation between makefiles and makefiles generated by
+autotools, today Python developers are very afraid of doing simple
+things when it comes to project infrastructure (it absolutely has to
+be a lot of configuration fed into another configuration, processed by
+a bunch of programs to generate even more configuration&hellip;) And most
+Python programmers don&rsquo;t really know how the essential components of
+all of this infrastructure work. They rely on a popular / established
+pattern of insane multi-step configuration generation to do simple
+things. And the tradition thus developed is so strong, that it became
+really cultish. This, of course, negatively contributes to the overall
+quality of Python packages and tools to work with them.</p>
+<p>Unfortunately, the landscape of Python today is very diverse.  There&rsquo;s
+no universally good solution to package management because it&rsquo;s broken
+in the place where nobody is allowed to fix it.  Commercial and
+non-commercial bodies alike rely on people with a lot of experience
+and knowledge of particular Python gotchas to get things done. (Hey,
+that&rsquo;s me!) And in different cases, the answer to the problem will be
+different. Sometimes venv is good enough. Other times you may want a
+container or a vm image. Yet in a different situation you may want a
+PyPA or conda package&hellip; and there&rsquo;s more.</p>
+<h2>Markdown &amp; Madness</h2>
+<p><em><a href="https://mail.python.org/pipermail/python-list/2024-May/912352.html">src</a>, by DN on the Python Mailing List</em></p>
+<p>With reference to another reply here, the &ldquo;Weird stuff&rdquo; came from 
+reading the question, finding it unclear, and only later realising that 
+whereas most people write Markdown-formatted documents for later 
+processing, or perhaps docstrings in Markdown-format for collection by 
+documentation systems; here, the objective appears to be using Python to 
+generate Markdown.</p>
+<p>How much have you used Markdown to any serious degree, before attempting 
+this feat?</p>
+<p>On 26/05/24 18:28, Gilmeh Serda via Python-list wrote:</p>
+<blockquote>
+<p>The web claims (I think on all pages I&rsquo;ve read about Markdown and Python)
+that this code should work, with some very minor variants on the topic:</p>
+</blockquote>
+<p>There are so many &ldquo;variants&rdquo;, the problem is not &ldquo;minor&rdquo;!</p>
+<p>Markdown users learn to use their tool (again, see @Grant&rsquo;s question) 
+and work within the implementation of that &ldquo;variant&rdquo;.</p>
+<p>Like any other non-standardised tool, the users of some particular 
+&lsquo;version&rsquo; often fail to realise that others using different versions may 
+not enjoy the same experience. Plus-one for standardisation!</p>
+<p>At the end of the message, the web.refs reveal use of a package which is 
+based upon a variant of Markdown that is 20-years old(!), albeit with 
+some updates to suit yet another variant. Neither variant-author famous 
+for collaboration. The phrase YMMV springs to mind&hellip;</p>
+<p>Some ten years ago, an effort was made to standardise Markup, and it 
+ended-up being called CommonMark. Why is it not called &ldquo;Standard 
+Markdown&rdquo; one might ask? Because the fellow who &lsquo;invented&rsquo; Markdown 
+objected. This very objection has likely led directly to your 
+confusions, because the particular PyPi package is based upon that 
+original definition&hellip;</p>
+<p>Whereas, Markdown 3.6 is the most-recently updated Markdown search-hit 
+on PyPi today, have you tried any of the others (which, ironically, may 
+offer more recent and/or more standardised coverage)?</p>
+<p>This has worked in all of the Markdown processors I have used or tried-out:</p>
+<p>The (?reasonable) &lsquo;common-core&rsquo;, offers single back-ticks for code, 
+triple back-ticks for a code-block, and the latter with or without a 
+language specification which <em>usually</em> kicks-in syntax highlighting.</p>
+<blockquote>
+<p>```python</p>
+<p>import os</p>
+<p>with open(os.path.join(&lsquo;/home/user/apath&rsquo;, &lsquo;somefile&rsquo;)) as f:
+     print(f.read())
+```</p>
+<p>However, that is not the case. At least not for me (using Python 3.12.3).</p>
+</blockquote>
+<p>It&rsquo;s not Python 3 that is the problem. It is the &ldquo;Markdown 3.6&rdquo; package!</p>
+<blockquote>
+<p>If instead I type it:</p>
+</blockquote>
+<p>I&rsquo;ve not seen the hash-bang combination in-the-wild (but YMMV!)</p>
+<blockquote>
+<pre><code> #!python
 
- &gt;&gt;&gt; s_format = &quot;&gt;20,&quot;  # define how the value should be presented
+ import os
 
- &gt;&gt;&gt; F&quot;{s_int:{s_format}}&quot;
-'         123,456,789'
+ with open(os.path.join('/home/user/apath', 'somefile')) as f:
+     print(f.read())
 </code></pre>
-<p>Further, some of us don&rsquo;t like &lsquo;magic-constants&rsquo;, hence (previously):</p>
-<pre><code> &gt;&gt;&gt; S_FIELD_WIDTH = 20
- &gt;&gt;&gt; s_format = F&quot;&gt;{S_FIELD_WIDTH},&quot;
-</code></pre>
-<p>and if we really want to go over-board:</p>
-<pre><code> &gt;&gt;&gt; RIGHT_JUSTIFIED = &quot;&gt;&quot;
- &gt;&gt;&gt; THOUSANDS_SEPARATOR = &quot;,&quot;
- &gt;&gt;&gt; s_format = F&quot;{RIGHT_JUSTIFIED}{S_FIELD_WIDTH}{THOUSANDS_SEPARATOR}&quot;
-
-or (better) because right-justification is the default for numbers:
-
- &gt;&gt;&gt; s_format = F&quot;{S_FIELD_WIDTH}{THOUSANDS_SEPARATOR}&quot;
-</code></pre>
-<p>To the extreme that if your user keeps fiddling with presentations (none 
-ever do, do they?), all settings to do with s_format could be added to a 
-config/environment file, and thus be even further separated from 
-program-logic!</p>
-<hr />
-<h2>A Gem On Clear Requirements</h2>
-<p><em><a href="https://mail.python.org/pipermail/python-list/2024-June/912413.html">src</a>, by Avi gross on the Python Mailing List</em></p>
-<p>As someone who has spent lots of time writing code OR requirements of various levels or having to deal with the bugs afterwards, there can be a huge disconnect between the people trying to decide what to do and the people having to do it. It is not necessarily easy to come back later and ask for changes that wewre not anticipated in the design or implementation.</p>
-<p>I recently wrote a program where the original specifications seemed reasonable. In one part, I was asked to make a graph with some random number (or all) of the data shown as a series of connected line segments showing values for the same entity at different measurement periods and then superimpose the mean for all the original data, not just the subsample shown. This needed to be done on multiple subsamples of the original/calculated data so I made it into a function. </p>
-<p>One of the datasets contained a column that was either A or B and the function was called multiple times to show what a random sample of A+B, just A and just B graphed like along with the mean of the specific data it was drawn from. But then, I got an innocuously simple request.</p>
-<p>Could we graph A+B and overlay not only the means for A+B as was now done, but also the mean for A and the mean for B. Ideally, this would mean three bolder jaged lines superimposed above the plot and seemed simple enough.</p>
-<p>But was it? To graph the means in the first place, I made a more complex data structure needed so when graphed, it aligned well with what was below it. But that was hard coded in my function, but in one implementation, I now needed it three times. Extracting it into a new function was not trivial as it depended initially on other things within the body of the function. But, it was doable and might have been done that way had I known such a need might arise. It often is like that when there seems no need to write a function for just one use. The main function now needed to be modified to allow optionally adding one or two more datasets and if available, call the new function on each and add layers to the graph with the additional means (dashed and dotted) if they are called while otherwise, the function worked as before.</p>
-<p>But did I do it right? Well, if next time I am asked to have the data extended to have more measurements in more columns at more times, I might have to rewrite quite a bit of the code. My localized change allowed one or two additional means to be plotted. Adding an arbitrary number takes a different approach and, frankly, there are limits on how many kinds of &lsquo;line&rdquo; segments can be used to differentiate among them.</p>
-<p>Enough of the example except to make a point. In some projects, it is not enough to tell a programmer what you want NOW. You may get what you want fairly quickly but if you have ideas of possible extensions or future upgrades, it would be wiser to make clear some of the goals so the programmer creates an implementation that can be more easily adjusted to do more. Such code can take longer and be more complex so it may not pay off immediately.</p>
-<p>But, having said that, plenty of software may benefit from looking at what is happening and adjusting on the fly. Clearly my client cannot know what feedback they may get when showing an actual result to others who then suggest changes or enhancements. The results may not be anticipated so well in advance and especially not when the client has no idea what is doable and so on. </p>
-<p>A related example was a request for how to modify a sort of Venn Diagram  chart to change the font size. Why? Because some of the labels were long and the relative sizes of the pie slices were not known till an analysis of the data produced the appropriate numbers and ratios. This was a case where the documentation of the function used by them did not suggest how to do many things as it called a function that called others to quite some depth. A few simple experiments and some guesses and exploration showed me ways to pass arguments along that were not documented but that were passed properly down the chain and I could now change the text size and quite a few other things. But I asked myself if this was really the right solution the client needed. I then made a guess on how I could get the long text wrapped into multiple lines that fit into the sections of the Venn Diagram without shrinking the text at all, or as much. The client had not considered that as an option, but it was better for their display than required. But until people see such output, unless they have lots of experience, it cannot be expected they can tell you up-front what they want.</p>
-<p>One danger of languages like Python is that often people get the code you supply and modify it themselves or reuse it on some project they consider similar. That can be a good thing but often a mess as you wrote the code to do things in a specific way for a specific purpose &hellip;</p>
+<p>As an indented block (four spaces) and a shebang, THEN it works. You even
+get line numbers by default.</p>
+</blockquote>
+<p>An indented-block is NOT necessarily the same as a code-block - just as 
+&ldquo;code&rdquo; is not necessarily &ldquo;Python&rdquo;.</p>
+<p>Line numbers are great - although if a code snippet is extracted from 
+the middle of some example code-file, the original line-numbers won&rsquo;t 
+line-up with Markdown&rsquo;s&hellip;</p>
+<blockquote>
+<p>N.b. if you don&rsquo;t know, you also need to generate a css file using
+pygments to make this work.</p>
+</blockquote>
+<p>That&rsquo;s not what the package&rsquo;s docs suggest: 
+<a href="https://python-markdown.github.io/extensions/fenced_code_blocks/">https://python-markdown.github.io/extensions/fenced_code_blocks/</a></p>
+<blockquote>
+<p>Not until I started to read the markdown source code and its docs pages,
+the coin dropped.</p>
+<p>I&rsquo;m posting this for other Markdown newbies that otherwise probably would
+spend hours trying to make it work.</p>
+<p>Speaking of Markdown. Does anybody out there have any idea how to turn on
+table borders, adjust them (color/width/etc.) and such things? Currently I
+have to add HTML to do so, which works, but isn&rsquo;t very nice. I&rsquo;d hate to
+spend an additional day or two, hunting for this info.</p>
+</blockquote>
+<p>Again, heavily dependent upon the tool in-use. For example, most SSGs 
+and doc-tools (which accept Markdown) have a .css or theming-system 
+which enables &lsquo;decorations&rsquo;.</p>
+<p>References
+- <a href="https://pypi.org/project/Markdown/">https://pypi.org/project/Markdown/</a>
+- <a href="https://python-markdown.github.io/">https://python-markdown.github.io/</a></p>
+<p>Further reading:</p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Markdown">https://en.wikipedia.org/wiki/Markdown</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markdown">https://commonmark.org</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Markdown">https://pypi.org/search/?q=markdown</a></li>
+</ul>
       </article>
   
 

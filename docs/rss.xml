@@ -4,7 +4,7 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Sat, 14 Dec 2024 12:25:36 -0000</lastBuildDate>
+	<lastBuildDate>Mon, 16 Dec 2024 05:26:42 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
 
@@ -81,7 +81,7 @@
 	<item>
 		<title>Monday December 16, 2024</title>
 		<link>https://pyherald.com/articles/16_12_2024</link>
-		<description><![CDATA[Main titles for this edition: Conda's Package Management Pandemonium, Problems With Python's Package Management And Venv Philosophy, Markdown & Madness]]></description>
+		<description><![CDATA[Main titles for this edition: Conda: A Package Management Disaster?, Problems With Python's Package Management And Venv Philosophy, Markdown & Madness, Microsoft releases Markitdown, PDFMathTranslate, docling, PEP 768 – Safe external debugger interface for CPython, Vote to promote Bénédikt Tran (picnixz), JOBS]]></description>
 		<guid>https://pyherald.com/articles/16_12_2024</guid>
 		<pubDate>Sun, 15 Dec 2024 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>

@@ -1,4 +1,4 @@
-## Conda's Package Management Pandemonium
+## Conda: A Package Management Disaster?
 
 _[src](https://mail.python.org/pipermail/python-list/2024-May/912306.html), by Left Right on the Python Mailing List_
 
@@ -31,7 +31,7 @@ look up package location.
 
 So, suppose you ran:
 
-python -c "import numpy; numpy.__version__"
+`python -c "import numpy; numpy.__version__"`
 
 and then ran a Jupyter notebook and discovered that the version of
 NumPy in that notebook is not the one you just saw in the previous
@@ -39,11 +39,11 @@ output... What went wrong?
 
 You then may try:
 
-conda info numpy
+`conda info numpy`
 
 and get yet another answer.  And then you run
 
-pip show numpy
+`pip show numpy`
 
 And the answer is still different!
 
