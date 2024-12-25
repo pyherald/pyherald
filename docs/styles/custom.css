@@ -6,6 +6,11 @@ article p{
 article{
 	padding-left: 5%;
 	padding-right: 10%;
+
+	/* Prevent words from breaking mid-sentence */
+word-break: normal; /* Ensure normal word-breaking rules */
+overflow-wrap: normal; /* Prevent breaking words unnecessarily */
+white-space: normal; /* Adjust text wrapping */
 }
 
 article h2{

@@ -4,9 +4,39 @@
 	<title>PyHerald Feed</title>
 	<link>https://pyherald.com/</link>
 	<description>PythonLand's Newspaper</description>
-	<lastBuildDate>Mon, 16 Dec 2024 05:39:04 -0000</lastBuildDate>
+	<lastBuildDate>Wed, 25 Dec 2024 10:08:42 -0000</lastBuildDate>
 	<language>en-us</language>
 	<atom:link href="https://pyherald.com/rss.xml" rel="self" type="application/rss+xml" />
+
+	<item>
+		<title>Friday December 24, 2021</title>
+		<link>https://pyherald.com/articles/24_12_2021</link>
+		<description><![CDATA[Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions, Best libs 21, HTMX + Flask: Modern Python Web Apps, Discord.py's maintained fork is out, PEP 671 -- Syntax for late-bound function argument defaults, Why Python Packaging choose TOML]]></description>
+		<guid>https://pyherald.com/articles/24_12_2021</guid>
+		<pubDate>Thu, 23 Dec 2021 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Tuesday December 10, 2024</title>
+		<link>https://pyherald.com/articles/10_12_2024</link>
+		<description><![CDATA[Main titles for this edition: On Poor Error Reporting, A Good Reminder of Why Dead Batteries Are Being Removed: The Case of nntplib, Separating F-strings From The Format, A Gem On Clear Requirements, The 2025 Term Python Steering Council results, Sebastian Ramirez, author of FastAPI is now a Github Star, Astral takes stewardship of Python-build-standalone, JetBrains, Meta, and Microsoft collaborated to conduct a comprehensive survey on the state of Python typing: The findings, Python allowed to make network requests in ChatGPT: The Boons and Perils, 2024 Python in VS Code Wrapped, Django Steering Council candidates, EVENTS, JOBS]]></description>
+		<guid>https://pyherald.com/articles/10_12_2024</guid>
+		<pubDate>Mon, 09 Dec 2024 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
+
+	<item>
+		<title>Monday December 16, 2024</title>
+		<link>https://pyherald.com/articles/16_12_2024</link>
+		<description><![CDATA[Main titles for this edition: Conda: A Package Management Disaster?, Problems With Python's Package Management And Venv Philosophy, Markdown & Madness, Microsoft releases Markitdown, PDFMathTranslate, docling, PEP 768 – Safe external debugger interface for CPython, Vote to promote Bénédikt Tran (picnixz), PSF End-of-year Fundraiser and Membership Drive, JOBS]]></description>
+		<guid>https://pyherald.com/articles/16_12_2024</guid>
+		<pubDate>Sun, 15 Dec 2024 20:00:00 -0000</pubDate>
+		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
+		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
+	</item>
 
 	<item>
 		<title>Thursday January 20, 2022</title>
@@ -29,41 +59,11 @@
 	</item>
 
 	<item>
-		<title>Tuesday December 10, 2024</title>
-		<link>https://pyherald.com/articles/10_12_2024</link>
-		<description><![CDATA[Main titles for this edition: On Poor Error Reporting, A Good Reminder of Why Dead Batteries Are Being Removed: The Case of nntplib, Separating F-strings From The Format, A Gem On Clear Requirements, The 2025 Term Python Steering Council results, Sebastian Ramirez, author of FastAPI is now a Github Star, Astral takes stewardship of Python-build-standalone, JetBrains, Meta, and Microsoft collaborated to conduct a comprehensive survey on the state of Python typing: The findings, Python allowed to make network requests in ChatGPT: The Boons and Perils, 2024 Python in VS Code Wrapped, Django Steering Council candidates, EVENTS, JOBS]]></description>
-		<guid>https://pyherald.com/articles/10_12_2024</guid>
-		<pubDate>Mon, 09 Dec 2024 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
-		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
-	</item>
-
-	<item>
 		<title>Wednesday January 12, 2022</title>
 		<link>https://pyherald.com/articles/12_01_2022</link>
 		<description><![CDATA[Main titles for this edition: HTMX: How Python Fueled the Rise of a JS Lib, Normalisation In Distribution Filenames: Yet Another Packaging Vagary, Solving Local File Overshadowing Library Name, What's Happening in PythonLand?, Pattern Matching Cheatsheet, Taichi For Maths Algo Visualisation, MMOCR: A Cool, PyTorch-Based OCR Framework, Leveraging Python Packaging To Get AWS Serverless Right, CS50's Introduction to Artificial Intelligence with Python, A Collection of Blender Tools Written Over The Years, Six Levels of Python Decorators, Packaging Project Manager Monthly Update for December 21]]></description>
 		<guid>https://pyherald.com/articles/12_01_2022</guid>
 		<pubDate>Tue, 11 Jan 2022 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
-		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
-	</item>
-
-	<item>
-		<title>Friday December 24, 2021</title>
-		<link>https://pyherald.com/articles/24_12_2021</link>
-		<description><![CDATA[Main titles for this edition: So, Julia is the magic pill?, Fredrik Lundh's passing, Instagram: Type Hints for Compiler Optimisation, Preventing Unicode-related Gotchas, Why Remove Deprecated Functions, Best libs 21, HTMX + Flask: Modern Python Web Apps, Discord.py's maintained fork is out, PEP 671 -- Syntax for late-bound function argument defaults, Why Python Packaging choose TOML]]></description>
-		<guid>https://pyherald.com/articles/24_12_2021</guid>
-		<pubDate>Thu, 23 Dec 2021 20:00:00 -0000</pubDate>
-		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
-		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
-	</item>
-
-	<item>
-		<title>Sunday January 2, 2022</title>
-		<link>https://pyherald.com/articles/02_01_2022</link>
-		<description><![CDATA[Main titles for this edition: Why Python Matters for the VR Community, Representing Numbers: The Complexity Behind, Frozenset Can Be Altered by |=, The List of Active Core Devs, Book a session to talk about tech with the author of the rich library!, Learn Python ASTs, by building your own linter, WASM support in CPython increases by leaps and bounds., SEA: Static bytecode simulator by core dev Taskaya, You can now tell compelling data stories with Power BI in Jupyter notebooks! (With Python), Steering Council Members, Georgi Ker Awarded the PSF Community Service Award for Q4 2020]]></description>
-		<guid>https://pyherald.com/articles/02_01_2022</guid>
-		<pubDate>Sat, 01 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
 		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
@@ -79,11 +79,11 @@
 	</item>
 
 	<item>
-		<title>Monday December 16, 2024</title>
-		<link>https://pyherald.com/articles/16_12_2024</link>
-		<description><![CDATA[Main titles for this edition: Conda: A Package Management Disaster?, Problems With Python's Package Management And Venv Philosophy, Markdown & Madness, Microsoft releases Markitdown, PDFMathTranslate, docling, PEP 768 – Safe external debugger interface for CPython, Vote to promote Bénédikt Tran (picnixz), PSF End-of-year Fundraiser and Membership Drive, JOBS]]></description>
-		<guid>https://pyherald.com/articles/16_12_2024</guid>
-		<pubDate>Sun, 15 Dec 2024 20:00:00 -0000</pubDate>
+		<title>Sunday January 2, 2022</title>
+		<link>https://pyherald.com/articles/02_01_2022</link>
+		<description><![CDATA[Main titles for this edition: Why Python Matters for the VR Community, Representing Numbers: The Complexity Behind, Frozenset Can Be Altered by |=, The List of Active Core Devs, Book a session to talk about tech with the author of the rich library!, Learn Python ASTs, by building your own linter, WASM support in CPython increases by leaps and bounds., SEA: Static bytecode simulator by core dev Taskaya, You can now tell compelling data stories with Power BI in Jupyter notebooks! (With Python), Steering Council Members, Georgi Ker Awarded the PSF Community Service Award for Q4 2020]]></description>
+		<guid>https://pyherald.com/articles/02_01_2022</guid>
+		<pubDate>Sat, 01 Jan 2022 20:00:00 -0000</pubDate>
 		<dc:creator><![CDATA[ PyHerald Team ]]></dc:creator>
 		<enclosure url="https://picsum.photos/200/300" length="1000" type="image/jpeg" />
 	</item>
